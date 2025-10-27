@@ -1,6 +1,6 @@
 # FeadService
 
-DDD 기반 커뮤니티 피드 서비스
+클린 아키텍처 기반 커뮤니티 피드 서비스
 
 <!-- prettier-ignore-start -->
 ![SpringBoot](https://shields.io/badge/springboot-black?logo=springboot&style=for-the-badge%22)
