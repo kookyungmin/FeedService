@@ -1,18 +1,20 @@
 package net.happykoo.feed.user.domain;
 
+import net.happykoo.feed.common.domain.PositiveIntegerCounter;
+
 import java.util.Objects;
 
 public class User {
     private final Long id;
     private final UserInfo userInfo;
-    private final UserRelationCounter followerCounter;
-    private final UserRelationCounter followingCounter;
+    private final PositiveIntegerCounter followerCounter;
+    private final PositiveIntegerCounter followingCounter;
 
     public User(Long id, UserInfo userInfo) {
         this.id = id;
         this.userInfo = userInfo;
-        this.followerCounter = new UserRelationCounter();
-        this.followingCounter = new UserRelationCounter();
+        this.followerCounter = new PositiveIntegerCounter();
+        this.followingCounter = new PositiveIntegerCounter();
     }
 
     public void follow(User targetUser) {
