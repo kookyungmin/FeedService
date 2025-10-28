@@ -6,9 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="f3929449-8da5-4f65-8c4e-2e9a30072889" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/user/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/user/domain/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/user/domain/UserInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/user/domain/UserInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/net/happykoo/feed/user/domain/UserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/net/happykoo/feed/user/domain/UserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/post/domain/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/post/domain/Post.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/post/domain/comment/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/post/domain/comment/Comment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/post/domain/content/Content.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/post/domain/content/Content.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +64,7 @@
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
   }
 }</component>
-  <component name="RunManager" selected="Gradle.UserRelationServiceTest">
+  <component name="RunManager" selected="Gradle.CommentTest">
     <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
       <module name="FeedService" />
       <working_directory value="$PROJECT_DIR$" />
@@ -83,7 +84,7 @@
       <framework value="gotest" />
       <method v="2" />
     </configuration>
-    <configuration name="UserRelationServiceTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CommentContentTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -96,7 +97,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;net.happykoo.feed.user.application.UserRelationServiceTest&quot;" />
+            <option value="&quot;net.happykoo.feed.post.domain.content.CommentContentTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -106,7 +107,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="UserRelationServiceTest.givenCreateOneUser_whenFollow_thenUserThrowError" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CommentTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -119,7 +120,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;net.happykoo.feed.user.application.UserRelationServiceTest.givenCreateOneUser_whenFollow_thenUserThrowError&quot;" />
+            <option value="&quot;net.happykoo.feed.post.domain.comment.CommentTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -129,7 +130,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="UserRelationServiceTest.givenCreateTwoUserFollowed_whenFollow_thenUserThrowError" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="PostTest.givenPostCreated_whenUnlike_thenLikeCountShouldBe0" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -142,7 +143,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;net.happykoo.feed.user.application.UserRelationServiceTest.givenCreateTwoUserFollowed_whenFollow_thenUserThrowError&quot;" />
+            <option value="&quot;net.happykoo.feed.post.domain.PostTest.givenPostCreated_whenUnlike_thenLikeCountShouldBe0&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -152,7 +153,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="UserRelationServiceTest.givenCreateTwoUser_whenFollow_thenUserFollowSaved" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="PostTest.givenPostCreated_whenUpdateContentByOtherUser_thenReturnThrowError" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -165,7 +166,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;net.happykoo.feed.user.application.UserRelationServiceTest.givenCreateTwoUser_whenFollow_thenUserFollowSaved&quot;" />
+            <option value="&quot;net.happykoo.feed.post.domain.PostTest.givenPostCreated_whenUpdateContentByOtherUser_thenReturnThrowError&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -175,7 +176,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="UserServiceTest.givenUserInfoDto_whenCreateUser_thenCanFindUser" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="PostTest.givenPostCreated_whenUpdateContent_thenContentShouldBeUpdated" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -188,7 +189,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;net.happykoo.feed.user.application.UserServiceTest.givenUserInfoDto_whenCreateUser_thenCanFindUser&quot;" />
+            <option value="&quot;net.happykoo.feed.post.domain.PostTest.givenPostCreated_whenUpdateContent_thenContentShouldBeUpdated&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -209,11 +210,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.UserRelationServiceTest" />
-        <item itemvalue="Gradle.UserRelationServiceTest.givenCreateOneUser_whenFollow_thenUserThrowError" />
-        <item itemvalue="Gradle.UserRelationServiceTest.givenCreateTwoUserFollowed_whenFollow_thenUserThrowError" />
-        <item itemvalue="Gradle.UserRelationServiceTest.givenCreateTwoUser_whenFollow_thenUserFollowSaved" />
-        <item itemvalue="Gradle.UserServiceTest.givenUserInfoDto_whenCreateUser_thenCanFindUser" />
+        <item itemvalue="Gradle.CommentTest" />
+        <item itemvalue="Gradle.CommentContentTest" />
+        <item itemvalue="Gradle.PostTest.givenPostCreated_whenUpdateContentByOtherUser_thenReturnThrowError" />
+        <item itemvalue="Gradle.PostTest.givenPostCreated_whenUpdateContent_thenContentShouldBeUpdated" />
+        <item itemvalue="Gradle.PostTest.givenPostCreated_whenUnlike_thenLikeCountShouldBe0" />
       </list>
     </recent_temporary>
   </component>
@@ -225,7 +226,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1761537455919</updated>
-      <workItem from="1761537457420" duration="14601000" />
+      <workItem from="1761537457420" duration="19221000" />
     </task>
     <servers />
   </component>

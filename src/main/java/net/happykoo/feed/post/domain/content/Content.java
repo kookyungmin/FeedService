@@ -3,8 +3,8 @@ package net.happykoo.feed.post.domain.content;
 import net.happykoo.feed.post.domain.common.DateTimeInfo;
 
 public abstract class Content {
-    private String content;
-    private final DateTimeInfo dateTimeInfo;
+    protected String content;
+    protected final DateTimeInfo dateTimeInfo;
 
     protected Content(String content) {
         checkText(content);

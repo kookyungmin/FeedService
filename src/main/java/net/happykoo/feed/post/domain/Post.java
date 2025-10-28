@@ -11,7 +11,7 @@ public class Post {
     private final Long id;
     private final User author;
     private final Content content;
-    private final PositiveIntegerCounter likeCount;
+    private final PositiveIntegerCounter likeCounter;
     private PostPublicationState state;
 
     public Post(Long id, User author, Content content) {
@@ -22,7 +22,7 @@ public class Post {
         this.id = id;
         this.author = author;
         this.content = content;
-        this.likeCount = new PositiveIntegerCounter();
+        this.likeCounter = new PositiveIntegerCounter();
         this.state = PostPublicationState.PUBLIC;
     }
 
@@ -31,7 +31,7 @@ public class Post {
             throw new IllegalArgumentException();
         }
 
-        this.likeCount.increase();
+        this.likeCounter.increase();
     }
 
     public void unlike(User user) {
@@ -39,7 +39,7 @@ public class Post {
             throw new IllegalArgumentException();
         }
 
-        this.likeCount.decrease();
+        this.likeCounter.decrease();
     }
 
     public void updateContent(User user, String updatedContent, PostPublicationState state) {
@@ -48,6 +48,14 @@ public class Post {
         }
         this.content.updateContent(updatedContent);
         this.state = state;
+    }
+
+    public int likeCount() {
+        return likeCounter.getCount();
+    }
+
+    public String getContent() {
+        return content.getContent();
     }
 
     @Override
