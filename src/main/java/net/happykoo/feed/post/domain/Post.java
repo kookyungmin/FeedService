@@ -15,6 +15,10 @@ public class Post {
     private PostPublicationState state;
 
     public Post(Long id, User author, Content content) {
+        this(id, author, content, PostPublicationState.PUBLIC);
+    }
+
+    public Post(Long id, User author, Content content, PostPublicationState state) {
         if (author == null) {
             throw new IllegalArgumentException();
         }
@@ -23,7 +27,7 @@ public class Post {
         this.author = author;
         this.content = content;
         this.likeCounter = new PositiveIntegerCounter();
-        this.state = PostPublicationState.PUBLIC;
+        this.state = state;
     }
 
     public void like(User user) {
