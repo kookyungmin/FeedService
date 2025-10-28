@@ -6,6 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="f3929449-8da5-4f65-8c4e-2e9a30072889" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/user/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/user/domain/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/user/domain/UserInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/user/domain/UserInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/net/happykoo/feed/user/domain/UserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/net/happykoo/feed/user/domain/UserTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +63,7 @@
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
   }
 }</component>
-  <component name="RunManager" selected="Gradle.Tests in 'FeedService.test'">
+  <component name="RunManager" selected="Gradle.UserRelationServiceTest">
     <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
       <module name="FeedService" />
       <working_directory value="$PROJECT_DIR$" />
@@ -80,28 +83,7 @@
       <framework value="gotest" />
       <method v="2" />
     </configuration>
-    <configuration name="Tests in 'FeedService.test'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="UserTest.givenTwoUserAndUser1FollowUser2_whenUser1UnfollowUser2_thenDecreaseUserCount" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="UserRelationServiceTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -114,7 +96,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;net.happykoo.feed.user.domain.UserTest.givenTwoUserAndUser1FollowUser2_whenUser1UnfollowUser2_thenDecreaseUserCount&quot;" />
+            <option value="&quot;net.happykoo.feed.user.application.UserRelationServiceTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -124,7 +106,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="UserTest.givenTwoUserWithSameId_whenUser1followUser2_thenThrow" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="UserRelationServiceTest.givenCreateOneUser_whenFollow_thenUserThrowError" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -137,7 +119,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;net.happykoo.feed.user.domain.UserTest.givenTwoUserWithSameId_whenUser1followUser2_thenThrow&quot;" />
+            <option value="&quot;net.happykoo.feed.user.application.UserRelationServiceTest.givenCreateOneUser_whenFollow_thenUserThrowError&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -147,7 +129,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="UserTest.givenTwoUser_whenUser1FollowUser2_thenIncreaseUserCount" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="UserRelationServiceTest.givenCreateTwoUserFollowed_whenFollow_thenUserThrowError" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -160,7 +142,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;net.happykoo.feed.user.domain.UserTest.givenTwoUser_whenUser1FollowUser2_thenIncreaseUserCount&quot;" />
+            <option value="&quot;net.happykoo.feed.user.application.UserRelationServiceTest.givenCreateTwoUserFollowed_whenFollow_thenUserThrowError&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -170,7 +152,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="UserTest.givenTwoUser_whenUser1UnfollowUser2_thenNotDecreaseUserCount" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="UserRelationServiceTest.givenCreateTwoUser_whenFollow_thenUserFollowSaved" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -183,7 +165,30 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;net.happykoo.feed.user.domain.UserTest.givenTwoUser_whenUser1UnfollowUser2_thenNotDecreaseUserCount&quot;" />
+            <option value="&quot;net.happykoo.feed.user.application.UserRelationServiceTest.givenCreateTwoUser_whenFollow_thenUserFollowSaved&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="UserServiceTest.givenUserInfoDto_whenCreateUser_thenCanFindUser" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;net.happykoo.feed.user.application.UserServiceTest.givenUserInfoDto_whenCreateUser_thenCanFindUser&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -204,11 +209,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.Tests in 'FeedService.test'" />
-        <item itemvalue="Gradle.UserTest.givenTwoUserWithSameId_whenUser1followUser2_thenThrow" />
-        <item itemvalue="Gradle.UserTest.givenTwoUser_whenUser1UnfollowUser2_thenNotDecreaseUserCount" />
-        <item itemvalue="Gradle.UserTest.givenTwoUserAndUser1FollowUser2_whenUser1UnfollowUser2_thenDecreaseUserCount" />
-        <item itemvalue="Gradle.UserTest.givenTwoUser_whenUser1FollowUser2_thenIncreaseUserCount" />
+        <item itemvalue="Gradle.UserRelationServiceTest" />
+        <item itemvalue="Gradle.UserRelationServiceTest.givenCreateOneUser_whenFollow_thenUserThrowError" />
+        <item itemvalue="Gradle.UserRelationServiceTest.givenCreateTwoUserFollowed_whenFollow_thenUserThrowError" />
+        <item itemvalue="Gradle.UserRelationServiceTest.givenCreateTwoUser_whenFollow_thenUserFollowSaved" />
+        <item itemvalue="Gradle.UserServiceTest.givenUserInfoDto_whenCreateUser_thenCanFindUser" />
       </list>
     </recent_temporary>
   </component>
@@ -220,7 +225,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1761537455919</updated>
-      <workItem from="1761537457420" duration="12437000" />
+      <workItem from="1761537457420" duration="14601000" />
     </task>
     <servers />
   </component>
