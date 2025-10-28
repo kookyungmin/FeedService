@@ -6,8 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="f3929449-8da5-4f65-8c4e-2e9a30072889" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/post/application/CommentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/post/application/CommentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/post/application/PostService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/post/application/PostService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/post/application/interfaces/LikeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/post/application/interfaces/LikeRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/post/domain/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/post/domain/Post.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/post/domain/comment/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/post/domain/comment/Comment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/net/happykoo/feed/user/application/UserRelationServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/net/happykoo/feed/user/application/UserRelationServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/net/happykoo/feed/user/application/UserServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/net/happykoo/feed/user/application/UserServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,8 +40,8 @@
         <option value="package-info" />
         <option value="Enum" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="Record" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -63,7 +68,12 @@
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
   }
 }</component>
-  <component name="RunManager" selected="Gradle.Tests in 'FeedService.test'">
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="net.happykoo.feed.post.application" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Gradle.CommentServiceTest">
     <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
       <module name="FeedService" />
       <working_directory value="$PROJECT_DIR$" />
@@ -83,7 +93,7 @@
       <framework value="gotest" />
       <method v="2" />
     </configuration>
-    <configuration name="CommentContentTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CommentServiceTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -96,7 +106,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;net.happykoo.feed.post.domain.content.CommentContentTest&quot;" />
+            <option value="&quot;net.happykoo.feed.post.application.CommentServiceTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -106,7 +116,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="CommentTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CommentServiceTest.givenCommentRequestDto_whenCreate_thenReturnComment" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -119,7 +129,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;net.happykoo.feed.post.domain.comment.CommentTest&quot;" />
+            <option value="&quot;net.happykoo.feed.post.application.CommentServiceTest.givenCommentRequestDto_whenCreate_thenReturnComment&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -129,7 +139,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="PostTest.givenPostCreated_whenUpdateContentByOtherUser_thenReturnThrowError" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CommentServiceTest.givenCommentRequestDto_whenUpdate_thenReturnComment" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -142,7 +152,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;net.happykoo.feed.post.domain.PostTest.givenPostCreated_whenUpdateContentByOtherUser_thenReturnThrowError&quot;" />
+            <option value="&quot;net.happykoo.feed.post.application.CommentServiceTest.givenCommentRequestDto_whenUpdate_thenReturnComment&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -152,7 +162,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="PostTest.givenPostCreated_whenUpdateContent_thenContentShouldBeUpdated" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="PostServiceTest.givenCreatedPost_whenLikedTwice_thenReturnPostWithLike" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -165,7 +175,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;net.happykoo.feed.post.domain.PostTest.givenPostCreated_whenUpdateContent_thenContentShouldBeUpdated&quot;" />
+            <option value="&quot;net.happykoo.feed.post.application.PostServiceTest.givenCreatedPost_whenLikedTwice_thenReturnPostWithLike&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -175,7 +185,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="Tests in 'FeedService.test'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="PostServiceTest.givenCreatedPost_whenUnliked_thenReturnPostWithoutLike" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -187,6 +197,8 @@
         <option name="taskNames">
           <list>
             <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;net.happykoo.feed.post.application.PostServiceTest.givenCreatedPost_whenUnliked_thenReturnPostWithoutLike&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -207,11 +219,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.Tests in 'FeedService.test'" />
-        <item itemvalue="Gradle.CommentTest" />
-        <item itemvalue="Gradle.CommentContentTest" />
-        <item itemvalue="Gradle.PostTest.givenPostCreated_whenUpdateContentByOtherUser_thenReturnThrowError" />
-        <item itemvalue="Gradle.PostTest.givenPostCreated_whenUpdateContent_thenContentShouldBeUpdated" />
+        <item itemvalue="Gradle.CommentServiceTest" />
+        <item itemvalue="Gradle.CommentServiceTest.givenCommentRequestDto_whenUpdate_thenReturnComment" />
+        <item itemvalue="Gradle.CommentServiceTest.givenCommentRequestDto_whenCreate_thenReturnComment" />
+        <item itemvalue="Gradle.PostServiceTest.givenCreatedPost_whenUnliked_thenReturnPostWithoutLike" />
+        <item itemvalue="Gradle.PostServiceTest.givenCreatedPost_whenLikedTwice_thenReturnPostWithLike" />
       </list>
     </recent_temporary>
   </component>
@@ -223,7 +235,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1761537455919</updated>
-      <workItem from="1761537457420" duration="22593000" />
+      <workItem from="1761537457420" duration="28768000" />
     </task>
     <servers />
   </component>

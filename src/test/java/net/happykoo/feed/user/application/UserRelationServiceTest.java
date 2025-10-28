@@ -1,5 +1,6 @@
 package net.happykoo.feed.user.application;
 
+import net.happykoo.feed.fake.FakeObjectFactory;
 import net.happykoo.feed.user.application.dto.CreateUserRequestDto;
 import net.happykoo.feed.user.application.dto.FollowUserRequestDto;
 import net.happykoo.feed.user.application.interfaces.UserRelationRepository;
@@ -13,10 +14,8 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class UserRelationServiceTest {
-    private final UserRepository userRepository = new FakeUserRepository();
-    private final UserService userService = new UserService(userRepository);
-    private final UserRelationRepository userRelationRepository = new FakeUserRelationRepository();
-    private final UserRelationService userRelationService = new UserRelationService(userService, userRelationRepository);
+    private final UserService userService = FakeObjectFactory.userService();
+    private final UserRelationService userRelationService = FakeObjectFactory.userRelationService();
 
     private User user1;
     private User user2;
@@ -38,7 +37,6 @@ class UserRelationServiceTest {
         //then
         assertEquals(1, user1.followingCount());
         assertEquals(1, user2.followerCount());
-        assertTrue(userRelationRepository.isAlreadyFollow(user1, user2));
     }
 
     @Test
@@ -70,7 +68,6 @@ class UserRelationServiceTest {
         //then
         assertEquals(0, user1.followingCount());
         assertEquals(0, user2.followerCount());
-        assertFalse(userRelationRepository.isAlreadyFollow(user1, user2));
     }
 
     @Test

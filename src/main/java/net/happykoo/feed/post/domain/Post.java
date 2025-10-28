@@ -2,6 +2,7 @@ package net.happykoo.feed.post.domain;
 
 import net.happykoo.feed.common.domain.PositiveIntegerCounter;
 import net.happykoo.feed.post.domain.content.Content;
+import net.happykoo.feed.post.domain.content.PostContent;
 import net.happykoo.feed.post.domain.content.PostPublicationState;
 import net.happykoo.feed.user.domain.User;
 
@@ -13,6 +14,10 @@ public class Post {
     private final Content content;
     private final PositiveIntegerCounter likeCounter;
     private PostPublicationState state;
+
+    public static Post createPost(Long id, User author, String content) {
+        return new Post(id, author, new PostContent(content));
+    }
 
     public Post(Long id, User author, Content content) {
         this(id, author, content, PostPublicationState.PUBLIC);
@@ -60,6 +65,14 @@ public class Post {
 
     public String getContent() {
         return content.getContent();
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public User getAuthor() {
+        return author;
     }
 
     @Override

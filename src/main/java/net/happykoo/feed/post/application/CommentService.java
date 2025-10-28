@@ -14,9 +14,9 @@ public class CommentService {
     private final UserService userService;
     private final PostService postService;
     private final CommentRepository commentRepository;
-    private final LikeRepository<Comment> likeRepository;
+    private final LikeRepository likeRepository;
 
-    public CommentService(UserService userService, PostService postService, CommentRepository commentRepository, LikeRepository<Comment> likeRepository) {
+    public CommentService(UserService userService, PostService postService, CommentRepository commentRepository, LikeRepository likeRepository) {
         this.userService = userService;
         this.postService = postService;
         this.commentRepository = commentRepository;

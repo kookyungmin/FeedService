@@ -14,9 +14,9 @@ import net.happykoo.feed.user.domain.User;
 public class PostService {
     private final UserService userService;
     private final PostRepository postRepository;
-    private final LikeRepository<Post> likeRepository;
+    private final LikeRepository likeRepository;
 
-    public PostService(UserService userService, PostRepository postRepository, LikeRepository<Post> likeRepository) {
+    public PostService(UserService userService, PostRepository postRepository, LikeRepository likeRepository) {
         this.userService = userService;
         this.postRepository = postRepository;
         this.likeRepository = likeRepository;

@@ -1,5 +1,6 @@
 package net.happykoo.feed.user.application;
 
+import net.happykoo.feed.fake.FakeObjectFactory;
 import net.happykoo.feed.user.application.dto.CreateUserRequestDto;
 import net.happykoo.feed.user.application.interfaces.UserRepository;
 import net.happykoo.feed.user.application.repository.FakeUserRepository;
@@ -9,8 +10,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class UserServiceTest {
-    private final UserRepository userRepository = new FakeUserRepository();
-    private final UserService userService = new UserService(userRepository);
+    private final UserService userService = FakeObjectFactory.userService();
 
     @Test
     void givenUserInfoDto_whenCreateUser_thenCanFindUser() {
