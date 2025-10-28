@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f3929449-8da5-4f65-8c4e-2e9a30072889" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/common/domain/PositiveIntegerCounter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/common/domain/PositiveIntegerCounter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/user/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/user/domain/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +32,7 @@
       <list>
         <option value="package-info" />
         <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -61,7 +60,7 @@
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
   }
 }</component>
-  <component name="RunManager" selected="Gradle.UserTest.givenTwoUserWithSameId_whenUser1followUser2_thenThrow">
+  <component name="RunManager" selected="Gradle.Tests in 'FeedService.test'">
     <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
       <module name="FeedService" />
       <working_directory value="$PROJECT_DIR$" />
@@ -81,7 +80,7 @@
       <framework value="gotest" />
       <method v="2" />
     </configuration>
-    <configuration name="Tests in 'net.happykoo.feed'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="Tests in 'FeedService.test'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -93,8 +92,6 @@
         <option name="taskNames">
           <list>
             <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;net.happykoo.feed.*&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -207,11 +204,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.Tests in 'FeedService.test'" />
         <item itemvalue="Gradle.UserTest.givenTwoUserWithSameId_whenUser1followUser2_thenThrow" />
         <item itemvalue="Gradle.UserTest.givenTwoUser_whenUser1UnfollowUser2_thenNotDecreaseUserCount" />
         <item itemvalue="Gradle.UserTest.givenTwoUserAndUser1FollowUser2_whenUser1UnfollowUser2_thenDecreaseUserCount" />
         <item itemvalue="Gradle.UserTest.givenTwoUser_whenUser1FollowUser2_thenIncreaseUserCount" />
-        <item itemvalue="Gradle.Tests in 'net.happykoo.feed'" />
       </list>
     </recent_temporary>
   </component>
@@ -223,7 +220,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1761537455919</updated>
-      <workItem from="1761537457420" duration="10479000" />
+      <workItem from="1761537457420" duration="12437000" />
     </task>
     <servers />
   </component>
