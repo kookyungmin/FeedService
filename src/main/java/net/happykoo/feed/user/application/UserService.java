@@ -4,7 +4,9 @@ import net.happykoo.feed.user.application.dto.CreateUserRequestDto;
 import net.happykoo.feed.user.application.interfaces.UserRepository;
 import net.happykoo.feed.user.domain.User;
 import net.happykoo.feed.user.domain.UserInfo;
+import org.springframework.stereotype.Service;
 
+@Service
 public class UserService {
     private final UserRepository userRepository;
 

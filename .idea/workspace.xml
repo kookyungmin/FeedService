@@ -5,14 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f3929449-8da5-4f65-8c4e-2e9a30072889" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/post/application/CommentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/post/application/CommentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/post/application/PostService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/post/application/PostService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/post/application/interfaces/LikeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/post/application/interfaces/LikeRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/post/domain/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/post/domain/Post.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/post/domain/comment/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/post/domain/comment/Comment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/net/happykoo/feed/user/application/UserRelationServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/net/happykoo/feed/user/application/UserRelationServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/net/happykoo/feed/user/application/UserServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/net/happykoo/feed/user/application/UserServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/FeedApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/FeedApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/user/application/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/user/application/UserService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,7 +30,17 @@
         <task path="$PROJECT_DIR$">
           <activation />
         </task>
-        <projects_view />
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="FeedService" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
       </state>
     </system>
   </component>
@@ -57,23 +67,45 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.go.format.on.save.advertiser.fired&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.go.format.on.save.advertiser.fired": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "go.import.settings.migrated": "true",
+    "last_opened_file_path": "/Users/kookyungmin/study/FeedService/src/main/resources",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
+    "spring.configuration.checksum": "4f3ebe1b6a3cb382a9ceba4e82b5337b"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="net.happykoo.feed.post.application" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.CommentServiceTest">
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="gradle wrapper --gradle-version 8.7" />
+      <command value="gradle clean install" />
+      <command value="gradle clean build" />
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.FeedApplication">
     <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
       <module name="FeedService" />
       <working_directory value="$PROJECT_DIR$" />
@@ -116,7 +148,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="CommentServiceTest.givenCommentRequestDto_whenCreate_thenReturnComment" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="FeedService [clean build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -127,19 +159,18 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;net.happykoo.feed.post.application.CommentServiceTest.givenCommentRequestDto_whenCreate_thenReturnComment&quot;" />
+            <option value="clean" />
+            <option value="build" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="CommentServiceTest.givenCommentRequestDto_whenUpdate_thenReturnComment" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="FeedService [clean install]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -150,19 +181,18 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;net.happykoo.feed.post.application.CommentServiceTest.givenCommentRequestDto_whenUpdate_thenReturnComment&quot;" />
+            <option value="clean" />
+            <option value="install" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="PostServiceTest.givenCreatedPost_whenLikedTwice_thenReturnPostWithLike" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="FeedService [wrapper --gradle-version 8.7]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -173,57 +203,59 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;net.happykoo.feed.post.application.PostServiceTest.givenCreatedPost_whenLikedTwice_thenReturnPostWithLike&quot;" />
+            <option value="wrapper" />
+            <option value="--gradle-version" />
+            <option value="8.7" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="PostServiceTest.givenCreatedPost_whenUnliked_thenReturnPostWithoutLike" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;net.happykoo.feed.post.application.PostServiceTest.givenCreatedPost_whenUnliked_thenReturnPostWithoutLike&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
+    <configuration name="FeedApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <option name="ACTIVE_PROFILES" value="local" />
+      <module name="FeedService.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="net.happykoo.feed.FeedApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="net.happykoo.feed.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <extension name="software.aws.toolkits.jetbrains.core.execution.JavaAwsConnectionExtension">
+        <option name="credential" />
+        <option name="region" />
+        <option name="useCurrentConnection" value="false" />
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="aws.lambda" factoryName="Remote">
+      <option name="credentialProviderId" />
+      <option name="regionId" />
+      <option name="functionName" />
+      <option name="input" />
+      <option name="inputIsFile" value="false" />
       <method v="2" />
     </configuration>
-    <configuration default="true" type="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
-      <option name="AUTO_RESTART" value="false" />
-      <method v="2" />
-    </configuration>
+    <list>
+      <item itemvalue="Gradle.CommentServiceTest" />
+      <item itemvalue="Gradle.FeedService [clean build]" />
+      <item itemvalue="Gradle.FeedService [clean install]" />
+      <item itemvalue="Gradle.FeedService [wrapper --gradle-version 8.7]" />
+      <item itemvalue="Spring Boot.FeedApplication" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.FeedApplication" />
+        <item itemvalue="Gradle.FeedService [clean build]" />
+        <item itemvalue="Gradle.FeedService [clean install]" />
+        <item itemvalue="Gradle.FeedService [wrapper --gradle-version 8.7]" />
         <item itemvalue="Gradle.CommentServiceTest" />
-        <item itemvalue="Gradle.CommentServiceTest.givenCommentRequestDto_whenUpdate_thenReturnComment" />
-        <item itemvalue="Gradle.CommentServiceTest.givenCommentRequestDto_whenCreate_thenReturnComment" />
-        <item itemvalue="Gradle.PostServiceTest.givenCreatedPost_whenUnliked_thenReturnPostWithoutLike" />
-        <item itemvalue="Gradle.PostServiceTest.givenCreatedPost_whenLikedTwice_thenReturnPostWithLike" />
       </list>
     </recent_temporary>
   </component>
@@ -235,7 +267,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1761537455919</updated>
-      <workItem from="1761537457420" duration="28768000" />
+      <workItem from="1761537457420" duration="30257000" />
+      <workItem from="1761722780669" duration="2791000" />
     </task>
     <servers />
   </component>
