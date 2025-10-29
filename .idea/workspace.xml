@@ -5,14 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f3929449-8da5-4f65-8c4e-2e9a30072889" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/FeedApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/FeedApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/user/application/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/user/application/UserService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -268,7 +261,7 @@
       <option name="presentableId" value="Default" />
       <updated>1761537455919</updated>
       <workItem from="1761537457420" duration="30257000" />
-      <workItem from="1761722780669" duration="2791000" />
+      <workItem from="1761722780669" duration="2868000" />
     </task>
     <servers />
   </component>
