@@ -1,5 +1,8 @@
 package net.happykoo.feed.post.domain.comment;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
 import net.happykoo.feed.common.domain.PositiveIntegerCounter;
 import net.happykoo.feed.post.domain.Post;
 import net.happykoo.feed.post.domain.content.CommentContent;
@@ -8,10 +11,16 @@ import net.happykoo.feed.user.domain.User;
 
 import java.util.Objects;
 
+@Builder
+@AllArgsConstructor
 public class Comment {
+    @Getter
     private final Long id;
+    @Getter
     private final Post post;
+    @Getter
     private final User author;
+    @Getter
     private final Content content;
     private final PositiveIntegerCounter likeCount;
 

@@ -1,5 +1,8 @@
 package net.happykoo.feed.post.domain;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
 import net.happykoo.feed.common.domain.PositiveIntegerCounter;
 import net.happykoo.feed.post.domain.content.Content;
 import net.happykoo.feed.post.domain.content.PostContent;
@@ -8,11 +11,16 @@ import net.happykoo.feed.user.domain.User;
 
 import java.util.Objects;
 
+@Builder
+@AllArgsConstructor
 public class Post {
+    @Getter
     private final Long id;
+    @Getter
     private final User author;
     private final Content content;
     private final PositiveIntegerCounter likeCounter;
+    @Getter
     private PostPublicationState state;
 
     public static Post createPost(Long id, User author, String content) {
@@ -65,14 +73,6 @@ public class Post {
 
     public String getContent() {
         return content.getContent();
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public User getAuthor() {
-        return author;
     }
 
     @Override
