@@ -10,6 +10,7 @@ import net.happykoo.feed.post.domain.content.PostPublicationState;
 import net.happykoo.feed.user.domain.User;
 
 import java.util.Objects;
+import java.util.Optional;
 
 @Builder
 @AllArgsConstructor
@@ -40,7 +41,7 @@ public class Post {
         this.author = author;
         this.content = content;
         this.likeCounter = new PositiveIntegerCounter();
-        this.state = state;
+        this.state = getDefaultState(state);
     }
 
     public void like(User user) {
@@ -64,7 +65,7 @@ public class Post {
             throw new IllegalArgumentException();
         }
         this.content.updateContent(updatedContent);
-        this.state = state;
+        this.state = getDefaultState(state);
     }
 
     public int likeCount() {
@@ -86,5 +87,9 @@ public class Post {
     @Override
     public int hashCode() {
         return Objects.hash(id);
+    }
+
+    private PostPublicationState getDefaultState(PostPublicationState state) {
+        return Optional.ofNullable(state).orElse(PostPublicationState.PUBLIC);
     }
 }

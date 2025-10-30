@@ -40,11 +40,10 @@ class PostServiceTest {
         Post createdPost = postService.createPost(postRequestDto);
 
         //when
-        UpdatePostRequestDto updatePostRequestDto = new UpdatePostRequestDto(createdPost.getId(),
-                createdPost.getAuthor().getId(),
+        UpdatePostRequestDto updatePostRequestDto = new UpdatePostRequestDto(createdPost.getAuthor().getId(),
                 "updateTest",
                 PostPublicationState.PUBLIC);
-        Post updatedPost = postService.updatePost(updatePostRequestDto);
+        Post updatedPost = postService.updatePost(createdPost.getId(), updatePostRequestDto);
 
 
         assertEquals(createdPost.getId(), updatedPost.getId());

@@ -43,10 +43,9 @@ class CommentServiceTest {
         Comment createdComment = commentService.createComment(commentRequestDto);
 
         //when
-        UpdateCommentRequestDto updateCommentRequestDto = new UpdateCommentRequestDto(createdComment.getId(),
-                createdComment.getAuthor().getId(),
+        UpdateCommentRequestDto updateCommentRequestDto = new UpdateCommentRequestDto(createdComment.getAuthor().getId(),
                 "updateTest");
-        Comment updatedComment = commentService.updateComment(updateCommentRequestDto);
+        Comment updatedComment = commentService.updateComment(createdComment.getId(), updateCommentRequestDto);
 
 
         assertEquals(createdComment.getId(), updatedComment.getId());

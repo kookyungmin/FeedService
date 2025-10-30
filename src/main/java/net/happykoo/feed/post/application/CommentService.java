@@ -9,7 +9,9 @@ import net.happykoo.feed.post.domain.Post;
 import net.happykoo.feed.post.domain.comment.Comment;
 import net.happykoo.feed.user.application.UserService;
 import net.happykoo.feed.user.domain.User;
+import org.springframework.stereotype.Service;
 
+@Service
 public class CommentService {
     private final UserService userService;
     private final PostService postService;
@@ -24,20 +26,20 @@ public class CommentService {
     }
 
     public Comment getComment(Long id) {
-        return commentRepository.findById(id).orElseThrow(IllegalArgumentException::new);
+        return commentRepository.findById(id);
     }
 
     public Comment createComment(CreateCommentRequestDto dto) {
         Post post = postService.getPost(dto.postId());
-        User author = userService.getUser(dto.userId());
+        User author = userService.getUser(dto.authorId());
 
         Comment comment = Comment.createComment(author, post, dto.content());
         return commentRepository.save(comment);
     }
 
-    public Comment updateComment(UpdateCommentRequestDto dto) {
-        Comment comment = getComment(dto.commentId());
-        User author = userService.getUser(dto.userId());
+    public Comment updateComment(Long id, UpdateCommentRequestDto dto) {
+        Comment comment = getComment(id);
+        User author = userService.getUser(dto.authorId());
 
         comment.updateContent(author, dto.content());
 
