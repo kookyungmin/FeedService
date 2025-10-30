@@ -20,7 +20,6 @@ public class Comment {
     private final Post post;
     @Getter
     private final User author;
-    @Getter
     private final Content content;
     private final PositiveIntegerCounter likeCount;
 
@@ -81,18 +80,6 @@ public class Comment {
 
     public String getContent() {
         return content.getContent();
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public Post getPost() {
-        return post;
-    }
-
-    public User getAuthor() {
-        return author;
     }
 
     @Override
