@@ -8,12 +8,14 @@ import net.happykoo.feed.common.domain.PositiveIntegerCounter;
 import net.happykoo.feed.common.repository.entity.TimeBaseEntity;
 import net.happykoo.feed.user.domain.User;
 import net.happykoo.feed.user.domain.UserInfo;
+import org.hibernate.annotations.DynamicUpdate;
 
 @Entity
 @Table(name = "feed_user")
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
+@DynamicUpdate //변경된 부분만 update 쿼리 생성
 public class UserEntity extends TimeBaseEntity {
     @Id @GeneratedValue
     private Long id;

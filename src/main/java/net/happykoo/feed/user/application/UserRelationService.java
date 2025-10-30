@@ -3,7 +3,9 @@ package net.happykoo.feed.user.application;
 import net.happykoo.feed.user.application.dto.FollowUserRequestDto;
 import net.happykoo.feed.user.application.interfaces.UserRelationRepository;
 import net.happykoo.feed.user.domain.User;
+import org.springframework.stereotype.Service;
 
+@Service
 public class UserRelationService {
     private final UserService userService;
     private final UserRelationRepository userRelationRepository;
