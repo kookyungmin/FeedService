@@ -1,5 +1,8 @@
 package net.happykoo.feed.user.domain;
 
+import lombok.Getter;
+
+@Getter
 public class UserInfo {
     private final String name;
     private final String profileImageUrl;
@@ -10,9 +13,5 @@ public class UserInfo {
         }
         this.name = name;
         this.profileImageUrl = profileImageUrl;
-    }
-
-    public String getName() {
-        return name;
     }
 }

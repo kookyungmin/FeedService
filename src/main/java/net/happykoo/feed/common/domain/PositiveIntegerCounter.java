@@ -1,11 +1,14 @@
 package net.happykoo.feed.common.domain;
 
-public class PositiveIntegerCounter {
-    private int count;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 
-    public PositiveIntegerCounter() {
-        this.count = 0;
-    }
+@AllArgsConstructor
+@NoArgsConstructor
+public class PositiveIntegerCounter {
+    @Getter
+    private int count;
 
     public void increase() {
         this.count++;
@@ -16,9 +19,5 @@ public class PositiveIntegerCounter {
             return;
         }
         this.count--;
-    }
-
-    public int getCount() {
-        return count;
     }
 }

@@ -6,7 +6,7 @@ import net.happykoo.feed.user.domain.User;
 import net.happykoo.feed.user.domain.UserInfo;
 import org.springframework.stereotype.Service;
 
-@Service
+//@Service
 public class UserService {
     private final UserRepository userRepository;
 

@@ -5,11 +5,11 @@ spring:
     username: happykoo
     password:
 
-jpa:
-  show-sql: true
-  hibernate:
-    ddl-auto: update
-  properties:
+  jpa:
+    show-sql: true
     hibernate:
-      format_sql: true
-    open-in-view: false
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+      open-in-view: false

@@ -1,14 +1,23 @@
 package net.happykoo.feed.user.domain;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 import net.happykoo.feed.common.domain.PositiveIntegerCounter;
 
 import java.util.Objects;
 
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class User {
-    private final Long id;
-    private final UserInfo userInfo;
-    private final PositiveIntegerCounter followerCounter;
-    private final PositiveIntegerCounter followingCounter;
+    @Getter
+    private Long id;
+    @Getter
+    private UserInfo userInfo;
+    private PositiveIntegerCounter followerCounter;
+    private PositiveIntegerCounter followingCounter;
 
     public User(Long id, UserInfo userInfo) {
         if (userInfo == null) {
@@ -46,12 +55,12 @@ public class User {
         return this.followingCounter.getCount();
     }
 
-    public Long getId() {
-        return id;
+    public String getName() {
+        return userInfo.getName();
     }
 
-    public UserInfo getUserInfo() {
-        return userInfo;
+    public String getProfileImageUrl() {
+        return userInfo.getProfileImageUrl();
     }
 
     private void increaseFollowerCount() {
