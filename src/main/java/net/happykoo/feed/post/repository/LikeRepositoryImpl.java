@@ -6,9 +6,7 @@ import lombok.RequiredArgsConstructor;
 import net.happykoo.feed.post.application.interfaces.LikeRepository;
 import net.happykoo.feed.post.domain.Post;
 import net.happykoo.feed.post.domain.comment.Comment;
-import net.happykoo.feed.post.repository.entity.comment.CommentEntity;
 import net.happykoo.feed.post.repository.entity.like.LikeEntity;
-import net.happykoo.feed.post.repository.entity.post.PostEntity;
 import net.happykoo.feed.post.repository.jpa.JpaCommentRepository;
 import net.happykoo.feed.post.repository.jpa.JpaLikeRepository;
 import net.happykoo.feed.post.repository.jpa.JpaPostRepository;
@@ -38,7 +36,7 @@ public class LikeRepositoryImpl implements LikeRepository {
 //        save 를 하면 id 를 기반으로 있는지 없는지 체크 쿼리 실행됨
 //        jpaLikeRepository.save(likeEntity);
         entityManager.persist(likeEntity);
-        jpaPostRepository.updateLikeCount(new PostEntity(post));
+        jpaPostRepository.updateLikeCount(post.getId(), 1);
     }
 
     @Override
@@ -46,7 +44,7 @@ public class LikeRepositoryImpl implements LikeRepository {
     public void unlike(Post post, User user) {
         LikeEntity likeEntity = new LikeEntity(post, user);
         jpaLikeRepository.deleteById(likeEntity.getId());
-        jpaPostRepository.updateLikeCount(new PostEntity(post));
+        jpaPostRepository.updateLikeCount(post.getId(), -1);
     }
 
     @Override
@@ -61,7 +59,7 @@ public class LikeRepositoryImpl implements LikeRepository {
         LikeEntity likeEntity = new LikeEntity(comment, user);
 //        jpaLikeRepository.save(likeEntity);
         entityManager.persist(likeEntity);
-        jpaCommentRepository.updateLikeCount(new CommentEntity(comment));
+        jpaCommentRepository.updateLikeCount(comment.getId(), 1);
 
     }
 
@@ -70,6 +68,6 @@ public class LikeRepositoryImpl implements LikeRepository {
     public void unlike(Comment comment, User user) {
         LikeEntity likeEntity = new LikeEntity(comment, user);
         jpaLikeRepository.deleteById(likeEntity.getId());
-        jpaCommentRepository.updateLikeCount(new CommentEntity(comment));
+        jpaCommentRepository.updateLikeCount(comment.getId(), -1);
     }
 }

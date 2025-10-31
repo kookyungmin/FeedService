@@ -11,7 +11,6 @@ import net.happykoo.feed.post.domain.content.PostContent;
 import net.happykoo.feed.user.application.UserService;
 import net.happykoo.feed.user.domain.User;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class PostService {

@@ -17,12 +17,21 @@ public interface JpaPostRepository extends JpaRepository<PostEntity, Long> {
     void updatePostEntity(PostEntity postEntity);
 
     @Modifying
+//    TODO: 다음 주석 쿼리는 동시성 문제가 발생할 수 있음
+//    -> 단순 카운팅 변경이지만 동시성 문제가 있는 경우는 DB 쿼리 단에서 update (DB row lock 을 이용) ex) 아래 active query
+//    -> 도메인 객체 상태나 복잡한 비즈니스 로직은 도메인 계층에서 처리
+//    도메인에서 처리하는데 동시성 문제가 발생한다면, 낙관적 락(@Version) 또는 비관적 락(@Lock(LockModeType.PESSIMISTIC_WRITE)) 사용
+//    @Query(value = "UPDATE PostEntity p " +
+//            "SET p.likeCount = :#{#postEntity.likeCount}," +
+//            "p.updatedAt = current_timestamp " +
+//            "WHERE p.id = :#{#postEntity.id}")
     @Query(value = "UPDATE PostEntity p " +
-            "SET p.likeCount = :#{#postEntity.likeCount}," +
+            "SET p.likeCount = p.likeCount + :likeCount," +
             "p.updatedAt = current_timestamp " +
-            "WHERE p.id = :#{#postEntity.id}")
-    void updateLikeCount(PostEntity postEntity);
+            "WHERE p.id = :postId")
+    void updateLikeCount(Long postId, Integer likeCount);
 
+    //mysql 의 경우 update 문 실행 시 id 기반으로 row 단위 lock 걸음
     @Modifying
     @Query(value = "UPDATE PostEntity p " +
             "SET p.commentCount = p.commentCount + 1," +
