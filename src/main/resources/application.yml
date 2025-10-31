@@ -4,6 +4,14 @@ spring:
     url: jdbc:mysql://localhost:3306/feed
     username: happykoo
     password:
+    hikari:
+      pool-name: MyHikariPool
+      minimum-idle: 5
+      maximum-pool-size: 20
+      idle-timeout: 30000
+      connection-timeout: 20000
+      max-lifetime: 1800000
+      auto-commit: true
 
   jpa:
     show-sql: true
