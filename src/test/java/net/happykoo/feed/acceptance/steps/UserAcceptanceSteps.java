@@ -6,13 +6,10 @@ import io.restassured.response.Response;
 import net.happykoo.feed.user.application.dto.CreateUserRequestDto;
 import net.happykoo.feed.user.application.dto.FollowUserRequestDto;
 
-import java.awt.*;
-
-import static org.springframework.http.MediaType.APPLICATION_JSON;
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
 public class UserAcceptanceSteps {
-    public static ExtractableResponse<Response> createUser(CreateUserRequestDto dto) {
+    public static ExtractableResponse<Response> requestCreateUser(CreateUserRequestDto dto) {
         return RestAssured
                 .given()
                 .body(dto)
@@ -23,7 +20,7 @@ public class UserAcceptanceSteps {
                 .extract();
     }
 
-    public static ExtractableResponse<Response> followUser(FollowUserRequestDto dto) {
+    public static ExtractableResponse<Response> requestFollowUser(FollowUserRequestDto dto) {
         return RestAssured
                 .given()
                 .body(dto)

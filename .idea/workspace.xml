@@ -7,6 +7,11 @@
     <list default="true" id="f3929449-8da5-4f65-8c4e-2e9a30072889" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/post/ui/FeedController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/post/ui/FeedController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/net/happykoo/feed/acceptance/steps/UserAcceptanceSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/net/happykoo/feed/acceptance/steps/UserAcceptanceSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/net/happykoo/feed/acceptance/util/DataLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/net/happykoo/feed/acceptance/util/DataLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/net/happykoo/feed/acceptance/util/DatabaseCleaner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/net/happykoo/feed/acceptance/util/DatabaseCleaner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/application-test.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/application-test.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +108,7 @@
       <command value="gradle clean build" />
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.FeedApplication">
+  <component name="RunManager" selected="Gradle.FeedAcceptanceTest.test1">
     <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
       <module name="FeedService" />
       <working_directory value="$PROJECT_DIR$" />
@@ -123,6 +128,52 @@
       <framework value="gotest" />
       <method v="2" />
     </configuration>
+    <configuration name="FeedAcceptanceTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;net.happykoo.feed.acceptance.FeedAcceptanceTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="FeedAcceptanceTest.test1" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;net.happykoo.feed.acceptance.FeedAcceptanceTest.test1&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="FeedService [clean build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -136,51 +187,6 @@
           <list>
             <option value="clean" />
             <option value="build" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="FeedService [clean install]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="clean" />
-            <option value="install" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="FeedService [wrapper --gradle-version 8.7]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="wrapper" />
-            <option value="--gradle-version" />
-            <option value="8.7" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -239,19 +245,19 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Gradle.FeedAcceptanceTest" />
+      <item itemvalue="Gradle.FeedAcceptanceTest.test1" />
       <item itemvalue="Gradle.Tests in 'FeedService.test'" />
       <item itemvalue="Gradle.FeedService [clean build]" />
-      <item itemvalue="Gradle.FeedService [clean install]" />
-      <item itemvalue="Gradle.FeedService [wrapper --gradle-version 8.7]" />
       <item itemvalue="Spring Boot.FeedApplication" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.FeedApplication" />
+        <item itemvalue="Gradle.FeedAcceptanceTest.test1" />
+        <item itemvalue="Gradle.FeedAcceptanceTest" />
         <item itemvalue="Gradle.Tests in 'FeedService.test'" />
+        <item itemvalue="Spring Boot.FeedApplication" />
         <item itemvalue="Gradle.FeedService [clean build]" />
-        <item itemvalue="Gradle.FeedService [clean install]" />
-        <item itemvalue="Gradle.FeedService [wrapper --gradle-version 8.7]" />
       </list>
     </recent_temporary>
   </component>
@@ -264,7 +270,7 @@
       <option name="presentableId" value="Default" />
       <updated>1761537455919</updated>
       <workItem from="1761537457420" duration="30257000" />
-      <workItem from="1761722780669" duration="34978000" />
+      <workItem from="1761722780669" duration="37228000" />
     </task>
     <servers />
   </component>
@@ -284,5 +290,16 @@
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/net/happykoo/feed/acceptance/FeedAcceptanceTest.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

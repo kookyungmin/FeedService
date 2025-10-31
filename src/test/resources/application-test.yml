@@ -11,4 +11,5 @@ spring:
     properties:
       hibernate:
         format_sql: true
+        dialect: org.hibernate.dialect.H2Dialect
     open-in-view: false #OSIV(Open Session In View) -> View 까지 영속성 유지

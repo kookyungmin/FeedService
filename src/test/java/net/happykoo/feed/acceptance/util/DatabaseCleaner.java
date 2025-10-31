@@ -35,16 +35,16 @@ public class DatabaseCleaner implements InitializingBean {
     public void execute() {
         entityManager.flush();
         //H2 에서 외래키 제약 조건 해제 하는 명령어
-        entityManager.createNativeQuery("SET REFERENTIAL INTEGRITY FALSE").executeUpdate();
+        entityManager.createNativeQuery("SET REFERENTIAL_INTEGRITY FALSE").executeUpdate();
 
         for(String tableName : tableNames) {
-            entityManager.createNamedQuery("TRUNCATE TABLE " + tableName).executeUpdate();
+            entityManager.createNativeQuery("TRUNCATE TABLE " + tableName).executeUpdate();
             if (!notGeneratedIdTableNames.contains(tableName)) {
                 //ID SEQUENCE 모두 1로 초기화
                 entityManager.createNativeQuery("ALTER TABLE " + tableName + " ALTER COLUMN ID RESTART WITH 1").executeUpdate();
             }
         }
 
-        entityManager.createNativeQuery("SET REFERENTIAL INTEGRITY TRUE").executeUpdate();
+        entityManager.createNativeQuery("SET REFERENTIAL_INTEGRITY TRUE").executeUpdate();
     }
 }
