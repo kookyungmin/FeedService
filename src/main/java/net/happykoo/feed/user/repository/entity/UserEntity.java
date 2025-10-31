@@ -17,7 +17,7 @@ import org.hibernate.annotations.DynamicUpdate;
 @Getter
 @DynamicUpdate //변경된 부분만 update 쿼리 생성
 public class UserEntity extends TimeBaseEntity {
-    @Id @GeneratedValue
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
     private String profileImageUrl;

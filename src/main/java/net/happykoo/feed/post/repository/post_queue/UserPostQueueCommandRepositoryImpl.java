@@ -17,7 +17,9 @@ import java.util.List;
 public class UserPostQueueCommandRepositoryImpl implements UserPostQueueCommandRepository {
     private final JpaPostRepository jpaPostRepository;
     private final JpaUserRelationRepository jpaUserRelationRepository;
-    private final JpaUserPostQueueRepository jpaUserPostQueueRepository;
+//    대용량 데이터 고려하여 게시물들을 Redis 에 저장하게 변경 -> 실제로 구현하는 건 아니고 Fake Repository 만들어서 인수테스트
+//    private final JpaUserPostQueueRepository jpaUserPostQueueRepository;
+    private final UserPostQueueRedisRepository userPostQueueRedisRepository;
 
     @Override
     @Transactional
@@ -25,26 +27,30 @@ public class UserPostQueueCommandRepositoryImpl implements UserPostQueueCommandR
         UserEntity author = postEntity.getAuthor();
         List<Long> followerIds = jpaUserRelationRepository.findFollowers(author.getId());
 
-        List<UserPostQueueEntity> userPostQueueEntities = followerIds.stream()
-                .map(userId -> new UserPostQueueEntity(userId, postEntity.getId(), author.getId()))
-                .toList();
-
-        jpaUserPostQueueRepository.saveAll(userPostQueueEntities);
+//        List<UserPostQueueEntity> userPostQueueEntities = followerIds.stream()
+//                .map(userId -> new UserPostQueueEntity(userId, postEntity.getId(), author.getId()))
+//                .toList();
+//
+//        jpaUserPostQueueRepository.saveAll(userPostQueueEntities);
+        userPostQueueRedisRepository.publishPostToFollowerUserList(postEntity, followerIds);
     }
 
     @Override
     @Transactional
     public void saveFollowPost(Long userId, Long targetId) {
-        List<Long> postIds = jpaPostRepository.findAllPostIdsByAuthorId(targetId);
-        List<UserPostQueueEntity> userPostQueueEntities = postIds.stream()
-                .map(postId -> new UserPostQueueEntity(userId, postId, targetId))
-                .toList();
-        jpaUserPostQueueRepository.saveAll(userPostQueueEntities);
+//        List<Long> postIdList = jpaPostRepository.findAllPostIdByAuthorId(targetId);
+//        List<UserPostQueueEntity> userPostQueueEntities = postIds.stream()
+//                .map(postId -> new UserPostQueueEntity(userId, postId, targetId))
+//                .toList();
+//        jpaUserPostQueueRepository.saveAll(userPostQueueEntities);
+        List<PostEntity> postList = jpaPostRepository.findAllPostByAuthorId(targetId);
+        userPostQueueRedisRepository.publishPostListToFollowingUser(postList, userId);
     }
 
     @Override
     @Transactional
     public void deleteUnfollowPost(Long userId, Long targetId) {
-        jpaUserPostQueueRepository.deleteAllByUserIdAndAuthorId(userId, targetId);
+//        jpaUserPostQueueRepository.deleteAllByUserIdAndAuthorId(userId, targetId);
+        userPostQueueRedisRepository.deleteFeed(userId, targetId);
     }
 }

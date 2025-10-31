@@ -1,4 +1,4 @@
-package net.happykoo.feed.post.application.repository;
+package net.happykoo.feed.post.repository;
 
 import net.happykoo.feed.post.application.interfaces.PostRepository;
 import net.happykoo.feed.post.domain.Post;

@@ -38,10 +38,12 @@ public class DatabaseCleaner implements InitializingBean {
         entityManager.createNativeQuery("SET REFERENTIAL_INTEGRITY FALSE").executeUpdate();
 
         for(String tableName : tableNames) {
-            entityManager.createNativeQuery("TRUNCATE TABLE " + tableName).executeUpdate();
-            if (!notGeneratedIdTableNames.contains(tableName)) {
+            if (notGeneratedIdTableNames.contains(tableName)) {
+                entityManager.createNativeQuery("TRUNCATE TABLE " + tableName).executeUpdate();
+            } else {
                 //ID SEQUENCE 모두 1로 초기화
-                entityManager.createNativeQuery("ALTER TABLE " + tableName + " ALTER COLUMN ID RESTART WITH 1").executeUpdate();
+//                entityManager.createNativeQuery("ALTER TABLE " + tableName + " ALTER COLUMN ID RESTART WITH 1").executeUpdate();
+                entityManager.createNativeQuery("TRUNCATE TABLE " + tableName + " RESTART IDENTITY").executeUpdate();
             }
         }
 

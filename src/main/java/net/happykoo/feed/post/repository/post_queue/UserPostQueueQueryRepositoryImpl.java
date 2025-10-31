@@ -9,6 +9,7 @@ import net.happykoo.feed.post.repository.entity.post.QPostEntity;
 import net.happykoo.feed.post.repository.entity.post.QUserPostQueueEntity;
 import net.happykoo.feed.post.ui.dto.GetPostContentResponseDto;
 import net.happykoo.feed.user.repository.entity.QUserEntity;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -16,6 +17,7 @@ import java.util.List;
 import static net.happykoo.feed.post.repository.entity.like.LikeTarget.POST;
 
 @Repository
+@Profile("!test")
 @RequiredArgsConstructor
 public class UserPostQueueQueryRepositoryImpl implements UserPostQueueQueryRepository {
     private final JPAQueryFactory queryFactory;
