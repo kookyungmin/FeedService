@@ -1,6 +1,7 @@
 package net.happykoo.feed.user.repository;
 
 import lombok.RequiredArgsConstructor;
+import net.happykoo.feed.post.repository.post_queue.UserPostQueueCommandRepository;
 import net.happykoo.feed.user.application.interfaces.UserRelationRepository;
 import net.happykoo.feed.user.domain.User;
 import net.happykoo.feed.user.repository.entity.UserEntity;
@@ -18,6 +19,7 @@ import java.util.List;
 public class UserRelationRepositoryImpl implements UserRelationRepository {
     private final JpaUserRelationRepository jpaUserRelationRepository;
     private final JpaUserRepository jpaUserRepository;
+    private final UserPostQueueCommandRepository userPostQueueCommandRepository;
 
     @Override
     public boolean isAlreadyFollow(User user, User targetUser) {
@@ -32,6 +34,7 @@ public class UserRelationRepositoryImpl implements UserRelationRepository {
         UserRelationEntity userRelationEntity = new UserRelationEntity(id);
         jpaUserRelationRepository.save(userRelationEntity);
         jpaUserRepository.saveAll(List.of(new UserEntity(user), new UserEntity(targetUser)));
+        userPostQueueCommandRepository.saveFollowPost(user.getId(), targetUser.getId());
     }
 
     @Override
@@ -40,5 +43,6 @@ public class UserRelationRepositoryImpl implements UserRelationRepository {
         UserRelationIdEntity id = new UserRelationIdEntity(user.getId(), targetUser.getId());
         jpaUserRelationRepository.deleteById(id);
         jpaUserRepository.saveAll(List.of(new UserEntity(user), new UserEntity(targetUser)));
+        userPostQueueCommandRepository.deleteUnfollowPost(user.getId(), targetUser.getId());
     }
 }

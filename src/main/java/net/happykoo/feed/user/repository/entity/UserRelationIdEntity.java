@@ -12,6 +12,6 @@ import java.io.Serializable;
 @AllArgsConstructor
 @NoArgsConstructor
 public class UserRelationIdEntity implements Serializable {
-    private Long followingUserId;
     private Long followerUserId;
+    private Long followingUserId;
 }

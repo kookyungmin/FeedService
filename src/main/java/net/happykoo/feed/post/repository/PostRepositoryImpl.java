@@ -5,6 +5,7 @@ import net.happykoo.feed.post.application.interfaces.PostRepository;
 import net.happykoo.feed.post.domain.Post;
 import net.happykoo.feed.post.repository.entity.post.PostEntity;
 import net.happykoo.feed.post.repository.jpa.JpaPostRepository;
+import net.happykoo.feed.post.repository.post_queue.UserPostQueueCommandRepository;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -12,6 +13,7 @@ import org.springframework.transaction.annotation.Transactional;
 @RequiredArgsConstructor
 public class PostRepositoryImpl implements PostRepository {
     private final JpaPostRepository jpaPostRepository;
+    private final UserPostQueueCommandRepository userPostQueueCommandRepository;
 
     @Override
     @Transactional
@@ -22,11 +24,12 @@ public class PostRepositoryImpl implements PostRepository {
         if (postEntity.getId() != null) {
             //JPQL 로 update 하게 변경
             jpaPostRepository.updatePostEntity(postEntity);
+            return post;
         } else {
             jpaPostRepository.save(postEntity);
+            userPostQueueCommandRepository.publishPost(postEntity);
+            return postEntity.toPost();
         }
-
-        return postEntity.toPost();
     }
 
     @Override

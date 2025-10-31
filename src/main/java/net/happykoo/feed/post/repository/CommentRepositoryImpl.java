@@ -5,6 +5,7 @@ import net.happykoo.feed.post.application.interfaces.CommentRepository;
 import net.happykoo.feed.post.domain.comment.Comment;
 import net.happykoo.feed.post.repository.entity.comment.CommentEntity;
 import net.happykoo.feed.post.repository.jpa.JpaCommentRepository;
+import net.happykoo.feed.post.repository.jpa.JpaPostRepository;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -12,6 +13,7 @@ import org.springframework.transaction.annotation.Transactional;
 @RequiredArgsConstructor
 public class CommentRepositoryImpl implements CommentRepository {
     private final JpaCommentRepository jpaCommentRepository;
+    private final JpaPostRepository jpaPostRepository;
 
     @Override
     @Transactional
@@ -21,6 +23,7 @@ public class CommentRepositoryImpl implements CommentRepository {
             jpaCommentRepository.updateCommentEntity(commentEntity);
         } else {
             jpaCommentRepository.save(commentEntity);
+            jpaPostRepository.increaseCommentCount(commentEntity.getPost().getId());
         }
         return commentEntity.toComment();
     }

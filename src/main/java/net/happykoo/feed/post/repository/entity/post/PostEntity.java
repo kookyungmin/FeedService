@@ -10,6 +10,7 @@ import net.happykoo.feed.post.domain.Post;
 import net.happykoo.feed.post.domain.content.PostContent;
 import net.happykoo.feed.post.domain.content.PostPublicationState;
 import net.happykoo.feed.user.repository.entity.UserEntity;
+import org.hibernate.annotations.ColumnDefault;
 
 @Entity
 @Table(name = "feed_post")
@@ -27,6 +28,9 @@ public class PostEntity extends TimeBaseEntity {
     private String content;
 
     private Integer likeCount;
+
+    @ColumnDefault("0")
+    private Integer commentCount;
 
     @Convert(converter = PostPublicationStateConverter.class)
     private PostPublicationState state;
