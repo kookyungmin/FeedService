@@ -17,7 +17,7 @@ import java.util.List;
 public class UserPostQueueCommandRepositoryImpl implements UserPostQueueCommandRepository {
     private final JpaPostRepository jpaPostRepository;
     private final JpaUserRelationRepository jpaUserRelationRepository;
-//    대용량 데이터 고려하여 게시물들을 Redis 에 저장하게 변경 -> 실제로 구현하는 건 아니고 Fake Repository 만들어서 인수테스트
+//    대용량으로 데이터가 저장되고 많은 트래픽을 고려하여 사용자 별로 피드들을 Redis 에 저장하게 변경 -> 실제로 구현하는 건 아니고 Fake Repository 만들어서 인수테스트
 //    private final JpaUserPostQueueRepository jpaUserPostQueueRepository;
     private final UserPostQueueRedisRepository userPostQueueRedisRepository;
 
