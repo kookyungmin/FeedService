@@ -26,10 +26,20 @@ public class DataLoader {
     }
 
     public String getEmailToken(String email) {
-        return entityManager.createNativeQuery("SELECT token FROM feed_email_verification WHERE email = :email", String.class)
+        return entityManager.createQuery("SELECT e.token FROM EmailVerificationEntity e WHERE e.email = :email", String.class)
                 .setParameter("email", email)
-                .getSingleResult()
-                .toString();
+                .getSingleResult();
     }
 
+    public Boolean isEmailVerified(String email) {
+        return entityManager.createQuery("SELECT e.isVerified FROM EmailVerificationEntity e WHERE e.email = :email", Boolean.class)
+                .setParameter("email", email)
+                .getSingleResult();
+    }
+
+    public Long getUserId(String email) {
+        return entityManager.createQuery("SELECT u.userId FROM UserAccountEntity u WHERE u.email = :email", Long.class)
+                .setParameter("email", email)
+                .getSingleResult();
+    }
 }

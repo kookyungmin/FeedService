@@ -28,7 +28,7 @@ public class DatabaseCleaner implements InitializingBean {
                 .map(entity -> entity.getJavaType().getAnnotation(Table.class).name())
                 .toList();
 
-        notGeneratedIdTableNames = List.of("feed_user_relation", "feed_like");
+        notGeneratedIdTableNames = List.of("feed_user_relation", "feed_like", "feed_user_account");
     }
 
     @Transactional

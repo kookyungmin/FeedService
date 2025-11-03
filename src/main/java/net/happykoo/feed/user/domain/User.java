@@ -29,6 +29,10 @@ public class User {
         this.followingCounter = new PositiveIntegerCounter();
     }
 
+    public User(String name, String profileImageUrl) {
+        this(null, new UserInfo(name, profileImageUrl));
+    }
+
     public void follow(User targetUser) {
         if (this.equals(targetUser)) {
             //자기 자신은 팔로우 할 수 없음

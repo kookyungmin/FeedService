@@ -4,13 +4,14 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import net.happykoo.feed.common.repository.entity.TimeBaseEntity;
 
 @Entity
 @Table(name = "feed_email_verification")
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
-public class EmailVerificationEntity {
+public class EmailVerificationEntity extends TimeBaseEntity {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String email;
@@ -29,5 +30,10 @@ public class EmailVerificationEntity {
 
     public void verify() {
         this.isVerified = true;
+    }
+
+    public boolean hasSameToken(String token) {
+        if (this.token == null) return false;
+        return this.token.equals(token);
     }
 }

@@ -6,8 +6,19 @@
   <component name="ChangeListManager">
     <list default="true" id="f3929449-8da5-4f65-8c4e-2e9a30072889" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/auth/application/EmailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/auth/application/EmailService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/auth/application/dto/SendEmailRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/auth/application/dto/SendEmailRequestDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/auth/application/interfaces/EmailVerificationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/auth/application/interfaces/EmailVerificationRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/auth/repository/EmailVerificationRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/auth/repository/EmailVerificationRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/auth/repository/entity/EmailVerificationEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/auth/repository/entity/EmailVerificationEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/auth/ui/SignUpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/auth/ui/SignUpController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/common/ui/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/common/ui/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/user/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/user/domain/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/net/happykoo/feed/acceptance/SignUpAcceptanceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/net/happykoo/feed/acceptance/SignUpAcceptanceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/net/happykoo/feed/acceptance/steps/SignUpAcceptanceSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/net/happykoo/feed/acceptance/steps/SignUpAcceptanceSteps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/net/happykoo/feed/acceptance/util/AcceptanceTestTemplate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/net/happykoo/feed/acceptance/util/AcceptanceTestTemplate.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/net/happykoo/feed/acceptance/util/DataLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/net/happykoo/feed/acceptance/util/DataLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/net/happykoo/feed/acceptance/util/DatabaseCleaner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/net/happykoo/feed/acceptance/util/DatabaseCleaner.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +116,7 @@
       <command value="gradle clean build" />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.SignUpAcceptanceTest">
+  <component name="RunManager" selected="Gradle.Tests in 'FeedService.test'">
     <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
       <module name="FeedService" />
       <working_directory value="$PROJECT_DIR$" />
@@ -125,7 +136,7 @@
       <framework value="gotest" />
       <method v="2" />
     </configuration>
-    <configuration name="EmailTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="PasswordTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -138,30 +149,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;net.happykoo.feed.auth.domain.EmailTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="RandomTokenGeneratorTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;net.happykoo.feed.auth.domain.RandomTokenGeneratorTest&quot;" />
+            <option value="&quot;net.happykoo.feed.auth.domain.PasswordTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -194,7 +182,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="SignUpAcceptanceTest.test1" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="SignUpAcceptanceTest.test7" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -207,7 +195,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;net.happykoo.feed.acceptance.SignUpAcceptanceTest.test1&quot;" />
+            <option value="&quot;net.happykoo.feed.acceptance.SignUpAcceptanceTest.test7&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -217,7 +205,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="SignUpAcceptanceTest.test2" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="SignUpAcceptanceTest.test8" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -230,7 +218,28 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;net.happykoo.feed.acceptance.SignUpAcceptanceTest.test2&quot;" />
+            <option value="&quot;net.happykoo.feed.acceptance.SignUpAcceptanceTest.test8&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="Tests in 'FeedService.test'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -249,19 +258,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Gradle.EmailTest" />
-      <item itemvalue="Gradle.RandomTokenGeneratorTest" />
+      <item itemvalue="Gradle.PasswordTest" />
       <item itemvalue="Gradle.SignUpAcceptanceTest" />
-      <item itemvalue="Gradle.SignUpAcceptanceTest.test1" />
-      <item itemvalue="Gradle.SignUpAcceptanceTest.test2" />
+      <item itemvalue="Gradle.SignUpAcceptanceTest.test7" />
+      <item itemvalue="Gradle.SignUpAcceptanceTest.test8" />
+      <item itemvalue="Gradle.Tests in 'FeedService.test'" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.Tests in 'FeedService.test'" />
+        <item itemvalue="Gradle.SignUpAcceptanceTest.test8" />
+        <item itemvalue="Gradle.SignUpAcceptanceTest.test7" />
         <item itemvalue="Gradle.SignUpAcceptanceTest" />
-        <item itemvalue="Gradle.SignUpAcceptanceTest.test1" />
-        <item itemvalue="Gradle.SignUpAcceptanceTest.test2" />
-        <item itemvalue="Gradle.RandomTokenGeneratorTest" />
-        <item itemvalue="Gradle.EmailTest" />
+        <item itemvalue="Gradle.PasswordTest" />
       </list>
     </recent_temporary>
   </component>
@@ -274,7 +283,7 @@
       <option name="presentableId" value="Default" />
       <updated>1761537455919</updated>
       <workItem from="1761537457420" duration="30257000" />
-      <workItem from="1761722780669" duration="51527000" />
+      <workItem from="1761722780669" duration="58292000" />
     </task>
     <servers />
   </component>

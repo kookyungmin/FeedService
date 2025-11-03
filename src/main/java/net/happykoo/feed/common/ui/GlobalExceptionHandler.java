@@ -17,6 +17,9 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(Exception.class)
     public Response<Void> handleException(Exception e) {
         log.error(e.getMessage());
+        if (e.getCause() instanceof IllegalArgumentException) {
+            return Response.error(ErrorCode.INVALID_INPUT_VALUE);
+        }
         return Response.error(ErrorCode.INTERNAL_ERROR);
     }
 }
