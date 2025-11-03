@@ -14,9 +14,16 @@ public class AcceptanceTestTemplate {
     @Autowired
     private DataLoader loader;
 
-    @BeforeEach
-    public void setup() {
+    protected void setup() {
         cleaner.execute();
         loader.loadData();
+    }
+
+    protected void cleanup() {
+        cleaner.execute();
+    }
+
+    protected String getEmailToken(String email) {
+        return loader.getEmailToken(email);
     }
 }

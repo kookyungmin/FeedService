@@ -1,5 +1,7 @@
 package net.happykoo.feed.acceptance.util;
 
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.PersistenceContext;
 import net.happykoo.feed.user.application.dto.CreateUserRequestDto;
 import net.happykoo.feed.user.application.dto.FollowUserRequestDto;
 import org.springframework.context.annotation.Profile;
@@ -11,6 +13,9 @@ import static net.happykoo.feed.acceptance.steps.UserAcceptanceSteps.requestFoll
 @Profile("test")
 @Component
 public class DataLoader {
+    @PersistenceContext
+    private EntityManager entityManager;
+
     public void loadData() {
         requestCreateUser(new CreateUserRequestDto("happykoo1", ""));
         requestCreateUser(new CreateUserRequestDto("happykoo2", ""));
@@ -19,4 +24,12 @@ public class DataLoader {
         requestFollowUser(new FollowUserRequestDto(1L, 2L));
         requestFollowUser(new FollowUserRequestDto(1L, 3L));
     }
+
+    public String getEmailToken(String email) {
+        return entityManager.createNativeQuery("SELECT token FROM feed_email_verification WHERE email = :email", String.class)
+                .setParameter("email", email)
+                .getSingleResult()
+                .toString();
+    }
+
 }
