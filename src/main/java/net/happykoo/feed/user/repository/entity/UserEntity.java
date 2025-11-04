@@ -9,6 +9,10 @@ import net.happykoo.feed.common.repository.entity.TimeBaseEntity;
 import net.happykoo.feed.user.domain.User;
 import net.happykoo.feed.user.domain.UserInfo;
 import org.hibernate.annotations.DynamicUpdate;
+import org.springframework.data.annotation.CreatedDate;
+
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "feed_user")
@@ -23,6 +27,11 @@ public class UserEntity extends TimeBaseEntity {
     private String profileImageUrl;
     private Integer followerCount;
     private Integer followingCount;
+
+    //커버링 인덱스 타기 위함(date(created_at) 는 temporary table 을 사용함)
+    @CreatedDate
+    @Column(updatable = false)
+    private LocalDate regDate;
 
     public UserEntity(User user) {
         this.id = user.getId();

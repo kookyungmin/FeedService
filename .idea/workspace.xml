@@ -6,19 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="f3929449-8da5-4f65-8c4e-2e9a30072889" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/auth/application/UserAccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/auth/application/UserAccountService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/auth/application/interfaces/UserAccountRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/auth/application/interfaces/UserAccountRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/auth/domain/Password.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/auth/domain/Password.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/auth/domain/UserAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/auth/domain/UserAccount.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/auth/repository/UserAccountRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/auth/repository/UserAccountRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/auth/repository/jpa/JpaUserAccountRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/auth/repository/jpa/JpaUserAccountRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/post/ui/FeedController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/post/ui/FeedController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/user/repository/entity/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/user/repository/entity/UserEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/net/happykoo/feed/acceptance/FeedAcceptanceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/net/happykoo/feed/acceptance/FeedAcceptanceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/net/happykoo/feed/acceptance/steps/FeedAcceptanceSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/net/happykoo/feed/acceptance/steps/FeedAcceptanceSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/net/happykoo/feed/acceptance/util/AcceptanceTestTemplate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/net/happykoo/feed/acceptance/util/AcceptanceTestTemplate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/net/happykoo/feed/acceptance/util/DataLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/net/happykoo/feed/acceptance/util/DataLoader.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +106,7 @@
       <command value="gradle clean build" />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.Tests in 'FeedService.test'">
+  <component name="RunManager" selected="Spring Boot.FeedApplication">
     <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
       <module name="FeedService" />
       <working_directory value="$PROJECT_DIR$" />
@@ -251,8 +240,14 @@
       <method v="2" />
     </configuration>
     <configuration name="FeedApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <option name="ACTIVE_PROFILES" value="local" />
       <module name="FeedService.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="net.happykoo.feed.FeedApplication" />
+      <extension name="software.aws.toolkits.jetbrains.core.execution.JavaAwsConnectionExtension">
+        <option name="credential" />
+        <option name="region" />
+        <option name="useCurrentConnection" value="false" />
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -292,7 +287,7 @@
       <option name="presentableId" value="Default" />
       <updated>1761537455919</updated>
       <workItem from="1761537457420" duration="30257000" />
-      <workItem from="1761722780669" duration="64930000" />
+      <workItem from="1761722780669" duration="68665000" />
     </task>
     <servers />
   </component>
