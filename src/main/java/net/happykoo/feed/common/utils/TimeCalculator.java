@@ -1,4 +1,4 @@
-package net.happykoo.feed.common.util;
+package net.happykoo.feed.common.utils;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;

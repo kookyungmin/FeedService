@@ -23,7 +23,7 @@ class LoginAcceptanceTest extends AcceptanceTestTemplate {
     @DisplayName("로그인 테스트 :: 정상적으로 로그인되어 Access Token 받는 경우")
     void test1() {
         //given
-        LoginRequestDto dto = new LoginRequestDto(email, "password");
+        LoginRequestDto dto = new LoginRequestDto(email, "password", "");
 
         //when
         String token = requestLoginGetAccessToken(dto);
@@ -36,7 +36,7 @@ class LoginAcceptanceTest extends AcceptanceTestTemplate {
     @DisplayName("로그인 테스트 :: 비밀번호가 틀린 경우 에러 발생")
     void test2() {
         //given
-        LoginRequestDto dto = new LoginRequestDto(email, "password11");
+        LoginRequestDto dto = new LoginRequestDto(email, "password11", "");
 
         //when
         Integer code = requestLoginResponseCode(dto);

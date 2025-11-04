@@ -1,6 +1,7 @@
 package net.happykoo.feed.post.ui;
 
 import lombok.RequiredArgsConstructor;
+import net.happykoo.feed.common.idempotency.Idempotent;
 import net.happykoo.feed.common.ui.Response;
 import net.happykoo.feed.post.application.PostService;
 import net.happykoo.feed.post.application.dto.CreatePostRequestDto;
@@ -30,6 +31,7 @@ public class PostController {
 
     }
 
+    @Idempotent
     @PostMapping("/like")
     public Response<Void> likePost(@RequestBody LikeRequestDto dto) {
         postService.likePost(dto);

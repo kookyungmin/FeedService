@@ -3,7 +3,7 @@ package net.happykoo.feed.admin.ui.dto.users;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import net.happykoo.feed.common.util.TimeCalculator;
+import net.happykoo.feed.common.utils.TimeCalculator;
 
 import java.time.LocalDateTime;
 

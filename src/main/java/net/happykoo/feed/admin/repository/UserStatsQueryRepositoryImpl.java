@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-import static net.happykoo.feed.common.util.TimeCalculator.getDateDaysAgo;
+import static net.happykoo.feed.common.utils.TimeCalculator.getDateDaysAgo;
 
 @Repository
 @RequiredArgsConstructor
