@@ -2,6 +2,8 @@ package net.happykoo.feed.admin.ui;
 
 import lombok.RequiredArgsConstructor;
 import net.happykoo.feed.admin.ui.dto.GetTableListResponse;
+import net.happykoo.feed.admin.ui.dto.posts.GetPostTableRequestDto;
+import net.happykoo.feed.admin.ui.dto.posts.GetPostTableResponseDto;
 import net.happykoo.feed.admin.ui.dto.users.GetDailyRegisterUserResponseDto;
 import net.happykoo.feed.admin.ui.dto.users.GetUserTableRequestDto;
 import net.happykoo.feed.admin.ui.dto.users.GetUserTableResponseDto;
@@ -30,6 +32,11 @@ public class AdminController {
     @GetMapping("/users")
     public Response<GetTableListResponse<GetUserTableResponseDto>> getUserTableList(GetUserTableRequestDto dto) {
         return Response.ok(adminTableQueryRepository.getUserTableData(dto));
+    }
+
+
+    public Response<GetTableListResponse<GetPostTableResponseDto>> getUserTableList(GetPostTableRequestDto dto) {
+        return Response.ok(adminTableQueryRepository.getPostTableData(dto));
     }
 
 }
