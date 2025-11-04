@@ -23,26 +23,56 @@ public class AdminTableQueryRepositoryImpl implements AdminTableQueryRepository 
 
     @Override
     public GetTableListResponse<GetUserTableResponseDto> getUserTableData(GetUserTableRequestDto dto) {
-        List<GetUserTableResponseDto> userList = queryFactory
-                .select(
-                        Projections.fields(
-                                GetUserTableResponseDto.class,
-                                userEntity.id.as("id"),
-                                userAccountEntity.email.as("email"),
-                                userEntity.name.as("name"),
-                                userAccountEntity.userRole.as("role"),
-                                userEntity.createdAt.as("createdAt"),
-                                userEntity.updatedAt.as("updatedAt"),
-                                userAccountEntity.lastLoginAt.as("lastLoginAt")
-                        )
-                )
+//        아래 방식은 커버링 인덱스가 사용되지 않기에 속도가 느림
+//        List<GetUserTableResponseDto> userList = queryFactory
+//                .select(
+//                        Projections.fields(
+//                                GetUserTableResponseDto.class,
+//                                userEntity.id.as("id"),
+//                                userAccountEntity.email.as("email"),
+//                                userEntity.name.as("name"),
+//                                userAccountEntity.userRole.as("role"),
+//                                userEntity.createdAt.as("createdAt"),
+//                                userEntity.updatedAt.as("updatedAt"),
+//                                userAccountEntity.lastLoginAt.as("lastLoginAt")
+//                        )
+//                )
+//                .from(userEntity)
+//                .join(userAccountEntity).on(userEntity.id.eq(userAccountEntity.userId))
+//                .where(likeName(dto.getName()))
+//                .orderBy(userEntity.id.desc())
+//                .offset(dto.getOffset())
+//                .limit(dto.getLimit())
+//                .fetch();
+
+//        커버링 인덱스(primary key는 클러스터링 인덱스 기본)를 사용하기에 속도가 빠름
+        List<Long> ids = queryFactory
+                .select(userEntity.id)
                 .from(userEntity)
-                .join(userAccountEntity).on(userEntity.id.eq(userAccountEntity.userId))
                 .where(likeName(dto.getName()))
                 .orderBy(userEntity.id.desc())
                 .offset(dto.getOffset())
                 .limit(dto.getLimit())
                 .fetch();
+
+        List<GetUserTableResponseDto> userList = queryFactory
+            .select(
+                    Projections.fields(
+                            GetUserTableResponseDto.class,
+                            userEntity.id.as("id"),
+                            userAccountEntity.email.as("email"),
+                            userEntity.name.as("name"),
+                            userAccountEntity.userRole.as("role"),
+                            userEntity.createdAt.as("createdAt"),
+                            userEntity.updatedAt.as("updatedAt"),
+                            userAccountEntity.lastLoginAt.as("lastLoginAt")
+                    )
+            )
+            .from(userEntity)
+            .join(userAccountEntity).on(userEntity.id.eq(userAccountEntity.userId))
+            .where(userEntity.id.in(ids))
+            .orderBy(userEntity.id.desc())
+            .fetch();
 
         int totalCount = queryFactory
                 .select(userEntity.id)
