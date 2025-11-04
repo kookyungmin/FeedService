@@ -10,6 +10,7 @@ build/
 .idea/compiler.xml
 .idea/libraries/
 .idea/dataSources/
+.idea/workspace.xml
 *.iws
 *.iml
 *.ipr
@@ -44,3 +45,5 @@ bin/
 
 
 src/main/resources/application-local.yml
+src/main/resources/firebase-sdk.json
+
