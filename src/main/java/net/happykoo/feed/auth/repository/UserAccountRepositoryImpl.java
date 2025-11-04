@@ -28,6 +28,7 @@ public class UserAccountRepositoryImpl implements UserAccountRepository {
     }
 
     @Override
+    @Transactional
     public UserAccount loginUser(String email, String password) {
         UserAccountEntity entity = jpaUserAccountRepository.findById(email)
                 .orElseThrow(() -> new IllegalArgumentException("존재하지 않는 이메일입니다."));
@@ -36,6 +37,8 @@ public class UserAccountRepositoryImpl implements UserAccountRepository {
         if (!account.matchPassword(password)) {
             throw new IllegalArgumentException("비밀번호가 일치하지 않습니다.");
         }
+
+        entity.updateLastLoginAt();
 
         return account;
     }

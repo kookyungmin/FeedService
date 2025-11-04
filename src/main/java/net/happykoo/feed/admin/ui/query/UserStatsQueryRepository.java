@@ -1,6 +1,6 @@
 package net.happykoo.feed.admin.ui.query;
 
-import net.happykoo.feed.admin.ui.dto.GetDailyRegisterUserResponseDto;
+import net.happykoo.feed.admin.ui.dto.users.GetDailyRegisterUserResponseDto;
 
 import java.util.List;
 

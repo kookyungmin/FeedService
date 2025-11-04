@@ -9,6 +9,8 @@ import lombok.NoArgsConstructor;
 import net.happykoo.feed.auth.domain.UserAccount;
 import net.happykoo.feed.common.repository.entity.TimeBaseEntity;
 
+import java.time.LocalDateTime;
+
 @Entity
 @Table(name = "feed_user_account")
 @NoArgsConstructor
@@ -20,6 +22,7 @@ public class UserAccountEntity extends TimeBaseEntity {
     private String password;
     private String userRole;
     private Long userId;
+    private LocalDateTime lastLoginAt;
 
     public UserAccountEntity(UserAccount userAccount, Long userId) {
         this.email = userAccount.getEmail();
@@ -30,5 +33,9 @@ public class UserAccountEntity extends TimeBaseEntity {
 
     public UserAccount toUserAccount() {
         return new UserAccount(email, password, userRole, userId);
+    }
+
+    public void updateLastLoginAt() {
+        lastLoginAt = LocalDateTime.now();
     }
 }

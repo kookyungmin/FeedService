@@ -6,8 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="f3929449-8da5-4f65-8c4e-2e9a30072889" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/user/repository/entity/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/user/repository/entity/UserEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/admin/repository/UserStatsQueryRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/admin/repository/UserStatsQueryRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/admin/ui/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/admin/ui/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/admin/ui/dto/GetDailyRegisterUserResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/admin/ui/dto/users/GetDailyRegisterUserResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/admin/ui/query/UserStatsQueryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/admin/ui/query/UserStatsQueryRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/auth/repository/UserAccountRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/auth/repository/UserAccountRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/auth/repository/entity/UserAccountEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/auth/repository/entity/UserAccountEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/common/domain/TimeCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/common/util/TimeCalculator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +36,17 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="FeedService" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="FeedService" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="FeedService" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="other" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -106,7 +122,7 @@
       <command value="gradle clean build" />
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.FeedApplication">
+  <component name="RunManager" selected="Gradle.FeedService [compileJava]">
     <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
       <module name="FeedService" />
       <working_directory value="$PROJECT_DIR$" />
@@ -149,7 +165,28 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="LoginAcceptanceTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="FeedService [compileJava]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="compileJava" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="PageableTest.test1" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -162,7 +199,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;net.happykoo.feed.acceptance.LoginAcceptanceTest&quot;" />
+            <option value="&quot;net.happykoo.feed.common.domain.PageableTest.test1&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -172,7 +209,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="LoginAcceptanceTest.test1" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="PageableTest.test2" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -185,30 +222,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;net.happykoo.feed.acceptance.LoginAcceptanceTest.test1&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="LoginAcceptanceTest.test2" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;net.happykoo.feed.acceptance.LoginAcceptanceTest.test2&quot;" />
+            <option value="&quot;net.happykoo.feed.common.domain.PageableTest.test2&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -261,20 +275,20 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Gradle.LoginAcceptanceTest" />
-      <item itemvalue="Gradle.LoginAcceptanceTest.test1" />
-      <item itemvalue="Gradle.LoginAcceptanceTest.test2" />
+      <item itemvalue="Gradle.FeedService [compileJava]" />
+      <item itemvalue="Gradle.PageableTest.test1" />
+      <item itemvalue="Gradle.PageableTest.test2" />
       <item itemvalue="Gradle.FeedAcceptanceTest" />
       <item itemvalue="Gradle.Tests in 'FeedService.test'" />
       <item itemvalue="Spring Boot.FeedApplication" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.FeedService [compileJava]" />
+        <item itemvalue="Gradle.PageableTest.test2" />
+        <item itemvalue="Gradle.PageableTest.test1" />
         <item itemvalue="Gradle.Tests in 'FeedService.test'" />
         <item itemvalue="Gradle.FeedAcceptanceTest" />
-        <item itemvalue="Gradle.LoginAcceptanceTest" />
-        <item itemvalue="Gradle.LoginAcceptanceTest.test2" />
-        <item itemvalue="Gradle.LoginAcceptanceTest.test1" />
       </list>
     </recent_temporary>
   </component>
@@ -287,7 +301,7 @@
       <option name="presentableId" value="Default" />
       <updated>1761537455919</updated>
       <workItem from="1761537457420" duration="30257000" />
-      <workItem from="1761722780669" duration="68665000" />
+      <workItem from="1761722780669" duration="72028000" />
     </task>
     <servers />
   </component>
