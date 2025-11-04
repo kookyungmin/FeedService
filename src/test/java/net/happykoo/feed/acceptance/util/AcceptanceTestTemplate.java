@@ -1,9 +1,12 @@
 package net.happykoo.feed.acceptance.util;
 
+import net.happykoo.feed.auth.application.dto.LoginRequestDto;
 import org.junit.jupiter.api.BeforeEach;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
+
+import static net.happykoo.feed.acceptance.steps.LoginAcceptanceSteps.requestLoginGetAccessToken;
 
 @ActiveProfiles("test")
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
@@ -33,5 +36,13 @@ public class AcceptanceTestTemplate {
 
     protected Boolean isEmailVerified(String email) {
         return loader.isEmailVerified(email);
+    }
+
+    protected void createUser(String email) {
+        loader.createUser(email);
+    }
+
+    protected String login(String email) {
+        return requestLoginGetAccessToken(new LoginRequestDto(email, "password"));
     }
 }

@@ -1,6 +1,8 @@
 package net.happykoo.feed.post.ui;
 
 import lombok.RequiredArgsConstructor;
+import net.happykoo.feed.common.principal.AuthPrincipal;
+import net.happykoo.feed.common.principal.UserPrincipal;
 import net.happykoo.feed.common.ui.Response;
 import net.happykoo.feed.post.repository.post_queue.UserPostQueueQueryRepository;
 import net.happykoo.feed.post.ui.dto.GetPostContentResponseDto;
@@ -14,10 +16,10 @@ import java.util.List;
 public class FeedController {
     private final UserPostQueueQueryRepository queueQueryRepository;
 
-    @GetMapping("/{userId}")
-    public Response<List<GetPostContentResponseDto>> getPostFeed(@PathVariable Long userId,
+    @GetMapping
+    public Response<List<GetPostContentResponseDto>> getPostFeed(@AuthPrincipal UserPrincipal userPrincipal,
                                                                  @RequestParam(required = false) Long lastPostId) {
-        List<GetPostContentResponseDto> result = queueQueryRepository.getPostList(userId, lastPostId);
+        List<GetPostContentResponseDto> result = queueQueryRepository.getPostList(userPrincipal.getUserId(), lastPostId);
         return Response.ok(result);
     }
 }

@@ -17,6 +17,13 @@ public class Password {
         return new Password(SHA256.encrypt(password));
     }
 
+    public static Password createPassword(String encryptedPassword) {
+        if (encryptedPassword == null || encryptedPassword.isBlank()) {
+            throw new IllegalArgumentException("패스워드는 빈 값이 될 수 없습니다.");
+        }
+        return new Password(encryptedPassword);
+    }
+
     public boolean matchPassword(String password) {
         return encryptedPassword.equals(SHA256.encrypt(password));
     }

@@ -2,9 +2,12 @@ package net.happykoo.feed.auth.application;
 
 import lombok.RequiredArgsConstructor;
 import net.happykoo.feed.auth.application.dto.CreateUserAccountRequestDto;
+import net.happykoo.feed.auth.application.dto.LoginRequestDto;
+import net.happykoo.feed.auth.application.dto.UserAccessTokenResponseDto;
 import net.happykoo.feed.auth.application.interfaces.EmailVerificationRepository;
 import net.happykoo.feed.auth.application.interfaces.UserAccountRepository;
 import net.happykoo.feed.auth.domain.Email;
+import net.happykoo.feed.auth.domain.TokenProvider;
 import net.happykoo.feed.auth.domain.UserAccount;
 import net.happykoo.feed.user.domain.User;
 import org.springframework.stereotype.Service;
@@ -14,6 +17,7 @@ import org.springframework.stereotype.Service;
 public class UserAccountService {
     private final UserAccountRepository userAccountRepository;
     private final EmailVerificationRepository emailVerificationRepository;
+    private final TokenProvider tokenProvider;
 
     public Long registerUser(CreateUserAccountRequestDto dto) {
         Email email = Email.createEmail(dto.email());
@@ -26,5 +30,12 @@ public class UserAccountService {
         userAccount = userAccountRepository.registerUser(userAccount, user);
 
         return userAccount.getUserId();
+    }
+
+    public UserAccessTokenResponseDto login(LoginRequestDto dto) {
+        UserAccount account = userAccountRepository.loginUser(dto.email(), dto.password());
+        String token = tokenProvider.createToken(account.getUserId(), account.getUserRole());
+
+        return new UserAccessTokenResponseDto(token);
     }
 }

@@ -2,11 +2,16 @@ package net.happykoo.feed.acceptance.util;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
+import net.happykoo.feed.auth.application.dto.CreateUserAccountRequestDto;
+import net.happykoo.feed.auth.application.dto.SendEmailRequestDto;
+import net.happykoo.feed.auth.application.dto.VerifyEmailRequestDto;
+import net.happykoo.feed.auth.domain.UserRole;
 import net.happykoo.feed.user.application.dto.CreateUserRequestDto;
 import net.happykoo.feed.user.application.dto.FollowUserRequestDto;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
+import static net.happykoo.feed.acceptance.steps.SignUpAcceptanceSteps.*;
 import static net.happykoo.feed.acceptance.steps.UserAcceptanceSteps.requestCreateUser;
 import static net.happykoo.feed.acceptance.steps.UserAcceptanceSteps.requestFollowUser;
 
@@ -17,9 +22,9 @@ public class DataLoader {
     private EntityManager entityManager;
 
     public void loadData() {
-        requestCreateUser(new CreateUserRequestDto("happykoo1", ""));
-        requestCreateUser(new CreateUserRequestDto("happykoo2", ""));
-        requestCreateUser(new CreateUserRequestDto("happykoo3", ""));
+        for(int i = 0; i < 4; i++) {
+            createUser("happykoo" + i + "@naver.com");
+        }
 
         requestFollowUser(new FollowUserRequestDto(1L, 2L));
         requestFollowUser(new FollowUserRequestDto(1L, 3L));
@@ -41,5 +46,12 @@ public class DataLoader {
         return entityManager.createQuery("SELECT u.userId FROM UserAccountEntity u WHERE u.email = :email", Long.class)
                 .setParameter("email", email)
                 .getSingleResult();
+    }
+
+    public void createUser(String email) {
+        requestSendEmail(new SendEmailRequestDto(email));
+        String token = getEmailToken(email);
+        requestVerifyEmail(new VerifyEmailRequestDto(email, token));
+        requestRegisterUser(new CreateUserAccountRequestDto(email, "password", UserRole.USER.name(), "happykoo", ""));
     }
 }

@@ -6,19 +6,19 @@
   <component name="ChangeListManager">
     <list default="true" id="f3929449-8da5-4f65-8c4e-2e9a30072889" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/auth/application/EmailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/auth/application/EmailService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/auth/application/dto/SendEmailRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/auth/application/dto/SendEmailRequestDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/auth/application/interfaces/EmailVerificationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/auth/application/interfaces/EmailVerificationRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/auth/repository/EmailVerificationRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/auth/repository/EmailVerificationRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/auth/repository/entity/EmailVerificationEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/auth/repository/entity/EmailVerificationEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/auth/ui/SignUpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/auth/ui/SignUpController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/common/ui/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/common/ui/GlobalExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/user/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/user/domain/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/net/happykoo/feed/acceptance/SignUpAcceptanceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/net/happykoo/feed/acceptance/SignUpAcceptanceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/net/happykoo/feed/acceptance/steps/SignUpAcceptanceSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/net/happykoo/feed/acceptance/steps/SignUpAcceptanceSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/auth/application/UserAccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/auth/application/UserAccountService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/auth/application/interfaces/UserAccountRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/auth/application/interfaces/UserAccountRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/auth/domain/Password.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/auth/domain/Password.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/auth/domain/UserAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/auth/domain/UserAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/auth/repository/UserAccountRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/auth/repository/UserAccountRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/auth/repository/jpa/JpaUserAccountRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/auth/repository/jpa/JpaUserAccountRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/post/ui/FeedController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/happykoo/feed/post/ui/FeedController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/net/happykoo/feed/acceptance/FeedAcceptanceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/net/happykoo/feed/acceptance/FeedAcceptanceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/net/happykoo/feed/acceptance/steps/FeedAcceptanceSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/net/happykoo/feed/acceptance/steps/FeedAcceptanceSteps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/net/happykoo/feed/acceptance/util/AcceptanceTestTemplate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/net/happykoo/feed/acceptance/util/AcceptanceTestTemplate.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/net/happykoo/feed/acceptance/util/DataLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/net/happykoo/feed/acceptance/util/DataLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/net/happykoo/feed/acceptance/util/DatabaseCleaner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/net/happykoo/feed/acceptance/util/DatabaseCleaner.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +57,7 @@
         <option value="Enum" />
         <option value="Record" />
         <option value="Interface" />
+        <option value="AnnotationType" />
         <option value="Class" />
       </list>
     </option>
@@ -136,7 +137,7 @@
       <framework value="gotest" />
       <method v="2" />
     </configuration>
-    <configuration name="PasswordTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="FeedAcceptanceTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -149,7 +150,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;net.happykoo.feed.auth.domain.PasswordTest&quot;" />
+            <option value="&quot;net.happykoo.feed.acceptance.FeedAcceptanceTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -159,7 +160,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="SignUpAcceptanceTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="LoginAcceptanceTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -172,7 +173,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;net.happykoo.feed.acceptance.SignUpAcceptanceTest&quot;" />
+            <option value="&quot;net.happykoo.feed.acceptance.LoginAcceptanceTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -182,7 +183,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="SignUpAcceptanceTest.test7" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="LoginAcceptanceTest.test1" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -195,7 +196,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;net.happykoo.feed.acceptance.SignUpAcceptanceTest.test7&quot;" />
+            <option value="&quot;net.happykoo.feed.acceptance.LoginAcceptanceTest.test1&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -205,7 +206,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="SignUpAcceptanceTest.test8" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="LoginAcceptanceTest.test2" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -218,7 +219,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;net.happykoo.feed.acceptance.SignUpAcceptanceTest.test8&quot;" />
+            <option value="&quot;net.happykoo.feed.acceptance.LoginAcceptanceTest.test2&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -249,6 +250,13 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="FeedApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="FeedService.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="net.happykoo.feed.FeedApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="aws.lambda" factoryName="Remote">
       <option name="credentialProviderId" />
       <option name="regionId" />
@@ -258,19 +266,20 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Gradle.PasswordTest" />
-      <item itemvalue="Gradle.SignUpAcceptanceTest" />
-      <item itemvalue="Gradle.SignUpAcceptanceTest.test7" />
-      <item itemvalue="Gradle.SignUpAcceptanceTest.test8" />
+      <item itemvalue="Gradle.LoginAcceptanceTest" />
+      <item itemvalue="Gradle.LoginAcceptanceTest.test1" />
+      <item itemvalue="Gradle.LoginAcceptanceTest.test2" />
+      <item itemvalue="Gradle.FeedAcceptanceTest" />
       <item itemvalue="Gradle.Tests in 'FeedService.test'" />
+      <item itemvalue="Spring Boot.FeedApplication" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.Tests in 'FeedService.test'" />
-        <item itemvalue="Gradle.SignUpAcceptanceTest.test8" />
-        <item itemvalue="Gradle.SignUpAcceptanceTest.test7" />
-        <item itemvalue="Gradle.SignUpAcceptanceTest" />
-        <item itemvalue="Gradle.PasswordTest" />
+        <item itemvalue="Gradle.FeedAcceptanceTest" />
+        <item itemvalue="Gradle.LoginAcceptanceTest" />
+        <item itemvalue="Gradle.LoginAcceptanceTest.test2" />
+        <item itemvalue="Gradle.LoginAcceptanceTest.test1" />
       </list>
     </recent_temporary>
   </component>
@@ -283,7 +292,7 @@
       <option name="presentableId" value="Default" />
       <updated>1761537455919</updated>
       <workItem from="1761537457420" duration="30257000" />
-      <workItem from="1761722780669" duration="58292000" />
+      <workItem from="1761722780669" duration="64930000" />
     </task>
     <servers />
   </component>

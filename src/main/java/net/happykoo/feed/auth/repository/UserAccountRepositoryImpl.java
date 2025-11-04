@@ -13,7 +13,7 @@ import org.springframework.transaction.annotation.Transactional;
 @Repository
 @RequiredArgsConstructor
 public class UserAccountRepositoryImpl implements UserAccountRepository {
-    private final JpaUserAccountRepository userAccountRepository;
+    private final JpaUserAccountRepository jpaUserAccountRepository;
     private final UserRepository userRepository;
 
     @Override
@@ -22,8 +22,21 @@ public class UserAccountRepositoryImpl implements UserAccountRepository {
         User savedUser = userRepository.save(user);
         UserAccountEntity entity = new UserAccountEntity(account, savedUser.getId());
 
-        userAccountRepository.save(entity);
+        jpaUserAccountRepository.save(entity);
 
         return entity.toUserAccount();
+    }
+
+    @Override
+    public UserAccount loginUser(String email, String password) {
+        UserAccountEntity entity = jpaUserAccountRepository.findById(email)
+                .orElseThrow(() -> new IllegalArgumentException("존재하지 않는 이메일입니다."));
+        UserAccount account = entity.toUserAccount();
+
+        if (!account.matchPassword(password)) {
+            throw new IllegalArgumentException("비밀번호가 일치하지 않습니다.");
+        }
+
+        return account;
     }
 }
