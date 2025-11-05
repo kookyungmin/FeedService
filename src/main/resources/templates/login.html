@@ -10,14 +10,7 @@
   import { getMessaging, getToken } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-messaging.js";
 
   // Firebase configuration
-  const firebaseConfig = {
-    apiKey: "AIzaSyCOkxLeergyzJih0b0abpAR4Ng9SBw6x7I",
-    authDomain: "feed-service-20bf5.firebaseapp.com",
-    projectId: "feed-service-20bf5",
-    storageBucket: "feed-service-20bf5.firebasestorage.app",
-    messagingSenderId: "699726505957",
-    appId: "1:699726505957:web:d58781d665027ae61af10c"
-  };
+  const firebaseConfig = {};
 
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
@@ -26,7 +19,7 @@
   // Function to retrieve FCM token
   async function retrieveToken() {
     try {
-      const currentToken = await getToken(messaging, {vapidKey: "BEdhZp0dcv6r9_u6YYb6m6xEqF8BXj3_L5_MfVIrcnTF2ySbCRWnk4xoxbQ-MPV2m4Rl9ldBauZZER-HnIv5HSs"});
+      const currentToken = await getToken(messaging, {vapidKey: ""});
       if (currentToken) {
         console.log(currentToken);
         return currentToken;

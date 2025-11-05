@@ -33,7 +33,7 @@ public class UserAccountService {
     }
 
     public UserAccessTokenResponseDto login(LoginRequestDto dto) {
-        UserAccount account = userAccountRepository.loginUser(dto.email(), dto.password());
+        UserAccount account = userAccountRepository.loginUser(dto.email(), dto.password(), dto.fcmToken());
         String token = tokenProvider.createToken(account.getUserId(), account.getUserRole());
 
         return new UserAccessTokenResponseDto(token);

@@ -3,6 +3,7 @@ package net.happykoo.feed.post.repository;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import lombok.RequiredArgsConstructor;
+import net.happykoo.feed.message.application.interfaces.MessageRepository;
 import net.happykoo.feed.post.application.interfaces.LikeRepository;
 import net.happykoo.feed.post.domain.Post;
 import net.happykoo.feed.post.domain.comment.Comment;
@@ -22,6 +23,7 @@ public class LikeRepositoryImpl implements LikeRepository {
     private final JpaPostRepository jpaPostRepository;
     private final JpaCommentRepository jpaCommentRepository;
     private final JpaLikeRepository jpaLikeRepository;
+    private final MessageRepository messageRepository;
 
     @Override
     public boolean checkLike(Post post, User user) {
@@ -37,6 +39,7 @@ public class LikeRepositoryImpl implements LikeRepository {
 //        jpaLikeRepository.save(likeEntity);
         entityManager.persist(likeEntity);
         jpaPostRepository.updateLikeCount(post.getId(), 1);
+        messageRepository.sendLikeMessage(user, post.getAuthor());
     }
 
     @Override

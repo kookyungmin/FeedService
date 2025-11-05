@@ -5,5 +5,5 @@ import net.happykoo.feed.user.domain.User;
 
 public interface UserAccountRepository {
     UserAccount registerUser(UserAccount account, User user);
-    UserAccount loginUser(String email, String password);
+    UserAccount loginUser(String email, String password, String token);
 }
